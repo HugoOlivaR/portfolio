@@ -1,10 +1,17 @@
-<header class="flex justify-between">
+---
+import SocialPill from '../components/SocialPill.astro';
+---
+
+<header class="flex justify-between items-center">
   <section class="w-2/3">
-    <h1 class="text-6xl font-bold">Hello 👋,<br /> i'm Hugo Oliva</h1>
+    <h1 class="text-6xl font-bold">Hello 👋<br /> I'm Hugo Oliva</h1>
     <p class="text-2xl mt-10">
       Frontend Developer with a strong passion for details. Specialized in React
       and committed to excellence in every project.
     </p>
+    <div>
+      <SocialPill />
+    </div>
   </section>
   <span
     class="relative size-56 bg-gray-700/60 border-4 border-blue shadow-lg rounded-full overflow-hidden"
