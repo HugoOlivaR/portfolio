@@ -1,0 +1,33 @@
+---
+import Navbar from '../components/NavBar.astro';
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-blue-400 min-h-dvh w-11/12 md:w-9/12 lg:w-8/12 xl:w-7/12 2xl:w-6/12">
+		<Navbar />
+		<div class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_30%,#13A5FB_150%)]"></div>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	html {
+		background: #0B0B22;
+		color-scheme: dark light;
+		display: flex;
+		justify-content: center;
+	}
+</style>

@@ -1,0 +1,17 @@
+---
+const pages = [
+  { name: 'Home', url: '/' },
+  { name: 'Experiencie', url: '/' },
+  { name: 'Projects', url: '/' },
+]
+---
+
+<nav class="flex justify-center items-center w-full h-[50px]">
+  <ul class="flex gap-5 text-lg">
+    {pages.map(page => (
+      <li>
+        <a class="hover:text-blue ease-out duration-100 transition" href={page.url}>{page.name}</a>
+      </li>
+    ))}
+  </ul>
+</nav>
