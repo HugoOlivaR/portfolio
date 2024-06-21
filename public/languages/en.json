@@ -1,0 +1,61 @@
+{
+  "intro": "Hello 👋",
+  "presentation": "I'm Hugo Oliva",
+  "description": "Frontend Developer with a strong passion for details. Specialized in React and committed to excellence in every project.",
+
+  "home": "Home",
+
+  "experiencie-title": "Experience",
+
+  "experience": [
+    {
+      "title": "Frontend Developer",
+      "company": "Gorilast, Madrid - Spain",
+      "date": "March 2024 - June 2024",
+      "description": "- Frontend of a food marketplace.\\n- Continuous integration and continuous deployment (CI/CD) using GitLab.\\n- Performed testing using Cypress & Storybook."
+    },
+    {
+      "title": "System Administrator",
+      "company": "HDT, Madrid - Spain",
+      "date": "March 2022 - June 2022",
+      "description": "- Maintained windows servers.\\n- Learned and applied VMware for virtualization.\\n- Configured and managed NGINX servers.\\n- Gained experience in networks and server infrastructure."
+    }
+  ],
+
+  "projects-title": "Projects",
+
+  "projects": [
+    {
+      "title": "SparkCollab",
+      "description": "Full-stack application designed to facilitate collaboration among students, entrepreneurs, and self-taught individuals. Thanks to its modern stack, SparkCollab ensures a fast, responsive, and seamless user experience."
+    },
+    {
+      "title": "Zentunes",
+      "description": "Simple web application that allows users listen some relaxing sounds such as rain, fire, waves and forest. It was developed using vanilla JavaScript, HTML and CSS."
+    }
+  ],
+
+  "education-title": "Education",
+
+  "education": [
+    {
+      "title": "AI Master's Degree",
+      "date": "2023 - 2024",
+      "description": "Artificial Intelligence and Big Data Master's Degree endorsed by the University of Murcia Spain."
+    },
+    {
+      "title": "Application Development Degree",
+      "date": "2022 - 2024",
+      "description": "Certificate of Higher Education cross-platform application development."
+    },
+    {
+      "title": "Sistems and Networks Degree",
+      "date": "2020 - 2022",
+      "description": "Vocational Education and Training Microcomputer systems and networks."
+    },
+    {
+      "title": "Always learning",
+      "description": "Constantly learning new things to feed my knowledge and let me learn."
+    }
+  ]
+}

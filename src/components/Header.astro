@@ -1,29 +1,48 @@
 ---
-import SocialPill from '../components/SocialPill.astro';
+import SocialPill from "../components/SocialPill.astro";
+import TechStack from "../components/TechStack.astro";
+import Navbar from '../components/NavBar.astro';
+import {useTranslations, getLangFromUrl} from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang)
 ---
 
-<header class="flex justify-between items-center">
-  <section class="w-2/3">
-    <h1 class="text-6xl font-bold">Hello 👋<br /> I'm Hugo Oliva</h1>
-    <p class="text-2xl mt-10">
-      Frontend Developer with a strong passion for details. Specialized in React
-      and committed to excellence in every project.
+<header
+  class="relative md:fixed top-0 flex flex-col items-center w-full md:w-2/5 px-5 sm:px-10 pt-20 2xl:pt-24 md:border-r-2 border-gray-100 dark:border-darkLight gap-5 min-h-screen z-10 md:bg-white dark:md:bg-dark bg-transparent md:overflow-y-auto md:h-screen pb-10"
+>
+<Navbar />
+  
+  <section class="flex flex-col sm:flex-row md:flex-col 2xl:flex-row md:justify-between w-full items-start sm:items-center md:items-start 2xl:items-center gap-5 2xl:gap-0">
+    <h1 class="text-4xl sm:text-5xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold order-2 2xl:order-1">{t('intro')}<br /> {t("presentation")}</h1>
+    <div class="order-1 2xl:order-2">
+      <span
+        class="size-40 2xl:size-52 bg-gray-700/60 border border-gray-100 shadow-lg rounded-full block relative overflow-hidden"
+        ><img
+          alt="avatar"
+          sizes="100vw"
+          srcset="https://yt3.googleusercontent.com/Km7pt-NmSLxHB8bo1AqpbtoSe6jhNqWi4i0M7SOf-0qNNMcmVIoFAoaPntHbH7J7F7j6qiUnBA=s176-c-k-c0x00ffffff-no-rj"
+          src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.2d4d367d.png&w=3840&q=30"
+          decoding="async"
+          data-nimg="fill"
+          class="rounded-full drop-shadow-2xl scale-125"
+          style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover"
+        />
+      </span>
+    </div>
+  </section>
+  <section class="flex flex-col 2xl:flex-row w-full gap-5 2xl:gap-5 items-start justify-between">
+    <p class="text-lg sm:text-xl 2xl:text-2xl">
+      {t("description")}
     </p>
-    <div>
+    <div class="px-0 2xl:px-5 flex justify-center items-center">
       <SocialPill />
     </div>
   </section>
-  <span
-    class="relative size-56 bg-gray-700/60 border-4 border-blue shadow-lg rounded-full overflow-hidden"
-    ><img
-      alt="avatar"
-      sizes="100vw"
-      srcset="https://cdn.discordapp.com/attachments/875848488565489746/1232805767174819901/Captura_de_pantalla_2024-02-12_123516.png?ex=662acb57&is=662979d7&hm=8ca09b7692418ed3a40a87f14807c03cc9bc7f7661613910caef83aa516485f4&"
-      src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.2d4d367d.png&w=3840&q=30"
-      decoding="async"
-      data-nimg="fill"
-      class="rounded-full drop-shadow-2xl"
-      style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover"
-    />
-  </span>
+  <section class="w-full mt-5 2xl:mt-10">
+    <h2 class="text-3xl sm:text-4xl font-bold">{t("skills")}:</h2>
+    <div class="flex flex-wrap gap-5 mt-7">
+      <TechStack />
+    </div>
+  </section>
 </header>

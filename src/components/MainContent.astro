@@ -1,0 +1,409 @@
+---
+import {useTranslations, getLangFromUrl} from '../i18n/utils';
+import {getRelativeLocaleUrl} from 'astro:i18n';
+
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang)
+---
+
+
+
+<main
+  class="p-5 sm:p-10 w-full md:w-3/5 relative md:absolute top-0 right-0 min-h-screen pt-20 2xl:pt-24 flex flex-col gap-20"
+>
+  <section>
+    <h3 class="text-4xl font-bold mb-10">🎯{t("experience-title")}</h3>
+
+    <div class="flex flex-col gap-3 border-gray-200 border-l-4 mx-4 px-5 relative pb-14 w-full">
+      <div
+        class="h-4 w-4 rounded-full border-2 border-blue bg-gray-200 dark:bg-darkLight absolute left-[-10px] top-3"
+      >
+      </div>
+      <div class="flex items-center justify-between 2xl:justify-start gap-5">
+        <h4 class="text-3xl">{t("experience.0.title")}</h4>
+        <div class="flex flex-wrap gap-2 justify-end w-fit">
+          <div
+            class="bg-[#66dbfb] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#66dbfb]"
+          >
+            React
+          </div>
+          <div
+            class="bg-[#cecece] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece]"
+          >
+            NextJS
+          </div>
+          <div
+            class="bg-[#3ebff8] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#3ebff8]"
+          >
+            TailwindCSS
+          </div>
+          <div
+            class="bg-[#ff4d89] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#ff4d89]"
+          >
+            Storybook
+          </div>
+        </div>
+      </div>
+      <h5 class="text-2xl">{t("experience.0.company")}</h5>
+      <p class="text-xl">{t("experience.0.date")}</p>
+      <div>
+        <p class="text-lg">
+          {t("experience.0.description1")}
+        </p>
+        <p class="text-lg">
+          {t("experience.0.description2")}
+        </p>
+        <p class="text-lg">
+          {t("experience.0.description3")}
+        </p>
+      </div>
+
+    </div>
+    <div class="flex flex-col gap-3 border-gray-200 border-l-4 mx-4 px-5 relative pb-5 w-full">
+      <div
+        class="h-4 w-4 rounded-full border-2 border-blue bg-gray-200 dark:bg-darkLight absolute left-[-10px] top-3"
+      >
+      </div>
+      <div class="flex items-center justify-between 2xl:justify-start gap-5">
+        <h4 class="text-3xl">{t("experience.1.title")}</h4>
+        <div class="flex flex-wrap gap-2 justify-end w-fit">
+          <div
+            class="bg-[#ff9c0a] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#ff9c0a]"
+          >
+            Vmware
+          </div>
+          <div
+            class="bg-[#77c832] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#77c832]"
+          >
+            Networks
+          </div>
+        </div>
+      </div>
+      <h5 class="text-2xl">{t("experience.1.company")}</h5>
+      <p class="text-xl">{t("experience.1.date")}</p>
+      <div>
+        <p class="text-lg">
+          {t("experience.1.description1")}
+        </p>
+        <p class="text-lg">
+          {t("experience.1.description2")}
+        </p>
+        <p class="text-lg">
+          {t("experience.1.description3")}
+        </p>
+        <p class="text-lg">
+          {t("experience.1.description4")}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="flex flex-col gap-10">
+    <h3 class="text-4xl font-bold">🚀 {t("projects-title")}</h3>
+    <div
+      class="flex flex-col xl:flex-row bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl duration-75 ease-linear group hover:shadow-lg cursor-default"
+    >
+      <div class="flex flex-col gap-6 px-5 relative pb-14 w-full">
+        <div class="flex items-center 2xl:justify-start gap-4">
+          <h4 class="text-3xl">{t("projects.0.title")}</h4>
+          <div class="flex flex-wrap gap-2 justify-end w-fit">
+            <div
+              class="bg-[#cecece] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece] flex gap-1 items-center"
+            >
+              Link
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-external-link stroke-black dark:stroke-white"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"
+                ></path><path d="M11 13l9 -9"></path><path d="M15 4h5v5"
+                ></path></svg
+              >
+            </div>
+            <div
+              class="bg-[#66dbfb] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#66dbfb]"
+            >
+              Fullstack
+            </div>
+          </div>
+        </div>
+        <p class="text-lg">
+          {t("projects.0.description")}
+        </p>
+        <div class="flex gap-5">
+          <div class="flex flex-row xl:flex-col flex-wrap gap-2">
+            <div
+              class="bg-[#77c832] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#77c832]"
+            >
+              NodeJs
+            </div>
+            <div
+              class="bg-[#f05539] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#f05539]"
+            >
+              Express
+            </div>
+            <div
+              class="bg-[#0eb6ff] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#0eb6ff]"
+            >
+              MySQL
+            </div>
+          </div>
+          <div class="w-1 h-26 bg-gray-200"></div>
+          <div class="flex flex-row xl:flex-col flex-wrap gap-2">
+            <div
+              class="bg-[#a373ff] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#a373ff]"
+            >
+              Vite
+            </div>
+            <div
+              class="bg-[#66dbfb] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#66dbfb]"
+            >
+              React
+            </div>
+            <div
+              class="bg-[#3ebff8] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#3ebff8]"
+            >
+              Tailwind
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex justify-center xl:justify-end items-center">
+        <div class="w-fit h-64 2xl:h-72 overflow-hidden">
+          <img
+            class="w-full h-full object-cover"
+            src="../../public/shots/sparkcollab.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col xl:flex-row bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50  border pt-6 px-4 rounded-2xl duration-75 ease-linear group hover:shadow-lg cursor-default"
+    >
+      <div class="flex flex-col gap-6 px-5 relative pb-14 w-full">
+        <div class="flex items-center 2xl:justify-start gap-4">
+          <h4 class="text-3xl">{t("projects.1.title")}</h4>
+          <div class="flex flex-wrap gap-2 justify-end w-fit">
+            <div
+              class="bg-[#cecece] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece] flex gap-1 items-center"
+            >
+              Link
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-external-link stroke-black dark:stroke-white"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"
+                ></path><path d="M11 13l9 -9"></path><path d="M15 4h5v5"
+                ></path></svg
+              >
+            </div>
+            <div
+              class="bg-[#bbe499] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#bbe499]"
+            >
+              Frontend
+            </div>
+          </div>
+        </div>
+        <p class="text-lg">
+          {t("projects.1.description")}
+        </p>
+        <div class="flex gap-5">
+          <div class="flex flex-row xl:flex-col gap-2">
+            <div
+              class="bg-[#f7e025] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#f7e025]"
+            >
+              JavaScript
+            </div>
+            <div
+              class="bg-[#3d9dd7] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#3d9dd7]"
+            >
+              CSS
+            </div>
+            <div
+              class="bg-[#fc4f13] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#fc4f13]"
+            >
+              HTML
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex justify-center xl:justify-end items-center">
+        <div class="w-fit h-64 2xl:h-72 overflow-hidden">
+          <img
+            class="w-full h-full object-cover"
+            src="../../public/shots/zentunes.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <a href={getRelativeLocaleUrl( lang , "/projects")}><div class="cursor-pointer w-fit">
+      <p class="text-lg flex items-end gap-1 text-blue hover:underline">
+        {t("see-more")} <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"
+          ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path
+            d="M13 6l6 6"></path></svg
+        >
+      </p>
+    </div></a>
+    
+  </section>
+
+  <section class="flex flex-col gap-10">
+    <h3 class="text-4xl font-bold">🎓 {t("education-title")}</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-10">
+      <div
+        class="flex flex-col xl:flex-row bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl w-full duration-75 ease-linear group hover:shadow-xl cursor-default"
+      >
+        <div
+          class="flex flex-col gap-6 px-5 relative pb-10 w-full justify-start items-center duration-75 ease-linear group-hover:scale-105 "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="100"
+            height="100"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-brain"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M15.5 13a3.5 3.5 0 0 0 -3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8"
+            ></path><path
+              d="M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1 -7 0v-1.8"
+            ></path><path d="M17.5 16a3.5 3.5 0 0 0 0 -7h-.5"></path><path
+              d="M19 9.3v-2.8a3.5 3.5 0 0 0 -7 0"></path><path
+              d="M6.5 16a3.5 3.5 0 0 1 0 -7h.5"></path><path
+              d="M5 9.3v-2.8a3.5 3.5 0 0 1 7 0v10"></path></svg
+          >
+          <div class="flex flex-col gap-5 text-center">
+            <h4 class="text-3xl">{t("education.0.title")}</h4>
+            <p>
+              {t("education.0.description")}
+            </p>
+            <p>{t("education.0.date")}</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col xl:flex-row bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl w-full duration-75 ease-linear group hover:shadow-xl cursor-default"
+      >
+        <div
+          class="flex flex-col gap-6 px-5 relative pb-10 w-full justify-start items-center duration-75 ease-linear group-hover:scale-105 "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="100"
+            height="100"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-code"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M7 8l-4 4l4 4"></path><path d="M17 8l4 4l-4 4"></path><path
+              d="M14 4l-4 16"></path></svg
+          >
+          <div class="flex flex-col gap-5 text-center">
+            <h4 class="text-3xl">{t("education.1.title")}</h4>
+            <p>
+              {t("education.1.description")}
+            </p>
+            <p>{t("education.1.date")}</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col xl:flex-row bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl w-full duration-75 ease-linear group hover:shadow-xl cursor-default"
+      >
+        <div
+          class="flex flex-col gap-6 px-5 relative pb-10 w-full justify-start items-center duration-75 ease-linear group-hover:scale-105 "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="100"
+            height="100"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-devices-pc"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M3 5h6v14h-6z"></path><path d="M12 9h10v7h-10z"></path><path
+              d="M14 19h6"></path><path d="M17 16v3"></path><path d="M6 13v.01"
+            ></path><path d="M6 16v.01"></path></svg
+          >
+          <div class="flex flex-col gap-5 text-center">
+            <h4 class="text-3xl">{t("education.2.title")}</h4>
+            <p>
+              {t("education.2.description")}
+            </p>
+            <p>{t("education.2.date")}</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col xl:flex-row bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl w-full duration-75 ease-linear group hover:shadow-xl cursor-default"
+      >
+        <div
+          class="flex flex-col gap-6 px-5 relative pb-10 w-full justify-start items-center duration-75 ease-linear group-hover:scale-105 "
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="100"
+            height="100"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-dots"
+            ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+              d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path
+              d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path
+              d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path></svg
+          >
+          <div class="flex flex-col gap-5 text-center">
+            <h4 class="text-3xl">{t("education.3.title")}</h4>
+            <p>
+              {t("education.3.description")}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

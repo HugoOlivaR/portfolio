@@ -1,17 +1,120 @@
 ---
+import {useTranslations, getLangFromUrl} from '../i18n/utils.ts';
+import {getRelativeLocaleUrl} from 'astro:i18n';
+
+const currentPath = new URL(Astro.request.url).pathname;
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang)
+
 const pages = [
-  { name: 'Home', url: '/' },
-  { name: 'Experiencie', url: '/' },
-  { name: 'Projects', url: '/' },
-]
+  { name: t('home'), url: getRelativeLocaleUrl(lang) },
+  { name: t('projects-title'), url: getRelativeLocaleUrl( lang , "/projects") },
+];
+
 ---
 
-<nav class="flex justify-center items-center w-full h-[50px]">
+<script type="module">
+  function toggleTheme() {
+    document.documentElement.classList.toggle("dark");
+    const isDarkMode = document.documentElement.classList.contains("dark");
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    const themeToggleIcon = document.querySelector(".theme-toggle svg");
+    setThemeIcon();
+  }
+
+  const setThemeIcon = () => {
+    const themeToggleIcon = document.getElementById('themeToggleIcon');
+    const isDarkMode = localStorage.getItem('theme') === 'dark';
+
+    if (isDarkMode) {
+      themeToggleIcon.innerHTML = `<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>`;
+    } else {
+      themeToggleIcon.innerHTML = `<path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />`;
+    }
+  }
+
+  // Ejecutar setThemeIcon al cargar el componente
+  if (typeof window !== 'undefined') {
+    window.onload = setThemeIcon;
+  }
+
+  function changeLanguage() {
+    const currentUrl = window.location.pathname;
+    const isSpanish = currentUrl.startsWith('/es');
+    const newPath = isSpanish ? currentUrl.substring(3) : '/es' + currentUrl;
+    window.location.href = newPath;
+  }
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const themeToggle = document.querySelector(".theme-toggle");
+    if (themeToggle) {
+      themeToggle.addEventListener("click", toggleTheme);
+    }
+    const languageToggle = document.querySelector(".change-language");
+    if (languageToggle) {
+      languageToggle.addEventListener("click", () => changeLanguage("es"));
+    }
+  });
+</script>
+
+<nav
+  class="flex justify-center items-center h-[50px] backdrop-blur-sm fixed top-0 z-10 bg-gray-100 dark:bg-darkLight mt-2 px-5 rounded-full"
+>
   <ul class="flex gap-5 text-lg">
-    {pages.map(page => (
-      <li>
-        <a class="hover:text-blue ease-out duration-100 transition" href={page.url}>{page.name}</a>
-      </li>
-    ))}
+    {
+      pages.map((page) => (
+        <li>
+          <a
+            class={`hover:text-blue ease-out duration-100 transition ${currentPath === page.url ? "text-blue" : "text-black dark:text-white"}`}
+            href={page.url}
+          >
+            {page.name}
+          </a>
+        </li>
+      ))
+    }
+    <li class="flex items-center cursor-pointer theme-toggle">
+      <svg
+        id="themeToggleIcon"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-sun"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path
+          d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+        ></path>
+      </svg>
+    </li>
+    <li class="flex items-end cursor-pointer change-language">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-language"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M4 5h7"></path>
+        <path d="M9 3v2c0 4.418 -2.239 8 -5 8"></path>
+        <path d="M5 9c0 2.144 2.952 3.908 6.7 4"></path>
+        <path d="M12 20l4 -9l4 9"></path>
+        <path d="M19.1 18h-6.2"></path>
+      </svg>
+    </li>
   </ul>
 </nav>
