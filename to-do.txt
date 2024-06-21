@@ -1,0 +1,3 @@
+- reducir tamaño de imagenes
+- pagina proyectos
+- seo (descripciones, ...)
