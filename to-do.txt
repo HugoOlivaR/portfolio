@@ -1,3 +1,5 @@
 - reducir tamaño de imagenes
 - pagina proyectos
 - seo (descripciones, ...)
+- cambiar foto
+- links de proyectos
