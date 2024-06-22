@@ -1,5 +1,10 @@
+to-do ❌:
 - reducir tamaño de imagenes
 - pagina proyectos
 - seo (descripciones, ...)
+
+Done ✅:
 - cambiar foto
 - links de proyectos
+- traducir etiquetas
+- cambiar correo por CV

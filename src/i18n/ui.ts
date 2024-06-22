@@ -14,6 +14,8 @@ export const ui = {
     "home": "Home",
     "skills": "Skills",
 
+    "networks": "Networks",
+
     "experience-title": "Experience",
     "experience.0.title": "Frontend Developer",
     "experience.0.company": "Gorilast, Madrid - Spain",
@@ -66,6 +68,8 @@ export const ui = {
     "home": "Inicio",
     "skills": "Habilidades",
 
+    "networks": "Redes",
+
     "experience-title": "Experiencia",
     "experience.0.title": "Desarrollador Frontend",
     "experience.0.company": "Gorilast, Madrid - España",
@@ -93,7 +97,7 @@ export const ui = {
     "see-more": "Ver más",
 
 
-    "education-title": "Educación",
+    "education-title": "Formación",
     "education.0.title": "Master en IA",
     "education.0.date": "2023 - 2024",
     "education.0.description": "Master en Inteligencia Artificial y Big Data avalado por la Universidad de Murcia España.",
