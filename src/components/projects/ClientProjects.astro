@@ -1,0 +1,156 @@
+---
+import { useTranslations, getLangFromUrl } from "../../i18n/utils.js";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<article class="flex flex-col">
+  <h2 class="text-3xl sm:text-4xl pb-5 font-bold">🔎 {t("client-projects")}</h2>
+  <section class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-10">
+    <div
+      class="flex flex-col bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl duration-150 ease-linear group hover:shadow-lg cursor-default w-fit dark:shadow-stone-700"
+    >
+      <div class="flex flex-col gap-6 px-5 relative w-full">
+        <div class="flex justify-between items-start gap-4">
+          <div>
+            <h4 class="text-3xl">{t("projects.4.title")}</h4>
+            <p class="text-xl pt-2">2024</p>
+          </div>
+          <div class="flex flex-wrap gap-2 justify-end w-fit">
+            <div
+              class="bg-[#bbe499] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#bbe499]"
+            >
+              Frontend
+            </div>
+            <div
+              class="bg-[#FFD433] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#FFD433]"
+            >
+            {t("medium-project")}
+            </div>
+            <a
+              href="http://elitevoltaje.com/"
+              target="_blank"
+              class="bg-[#cecece] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece] flex gap-1 items-center"
+            >
+              Link
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-external-link stroke-black dark:stroke-white"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                ></path><path
+                  d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"
+                ></path><path d="M11 13l9 -9"></path><path d="M15 4h5v5"
+                ></path></svg
+              >
+            </a>
+          </div>
+        </div>
+        <p class="text-lg">
+          {t("projects.4.description")}
+        </p>
+        
+      </div>
+      <div class="w-full flex mt-2 xl:pt-0 gap-5 items-center flex-col sm:flex-row lg:flex-col xl:flex-row justify-between px-5">
+        <div class="flex flex-row sm:flex-col lg:flex-row xl:flex-col gap-2 w-full">
+          <div
+            class="bg-[#FF3333] w-fit bg-opacity-50 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#FF3333] texw"
+          >
+            CMS
+          </div>
+          <div
+            class="bg-[#3ebff8] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#3ebff8]"
+          >
+            SEO
+          </div>
+        </div>
+        <div class=" max-h-64 max-w-72 overflow-hidden">
+          <img
+            class="w-full h-full object-cover"
+            src="/shots/elitevoltaje.webp"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl duration-150 ease-linear group hover:shadow-lg cursor-default w-fit dark:shadow-stone-700"
+    >
+      <div class="flex flex-col gap-6 px-5 relative w-full">
+        <div class="flex justify-between items-start gap-4">
+          <div>
+            <h4 class="text-3xl">{t("projects.5.title")}</h4>
+            <p class="text-xl pt-2">2024</p>
+          </div>
+          <div class="flex flex-wrap gap-2 justify-end w-fit">
+            <div
+              class="bg-[#bbe499] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#bbe499]"
+            >
+              Frontend
+            </div>
+            <div
+              class="bg-[#FFD433] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#FFD433]"
+            >
+            {t("medium-project")}
+            </div>
+            <a
+              class="bg-[#cecece] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece] flex gap-1 items-center"
+              href="https://hyfhouses.com/"
+              target="_blank"
+            >
+              Link
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-external-link stroke-black dark:stroke-white"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                ></path><path
+                  d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"
+                ></path><path d="M11 13l9 -9"></path><path d="M15 4h5v5"
+                ></path></svg
+              >
+            </a>
+          </div>
+        </div>
+        <p class="text-lg">
+          {t("projects.5.description")}
+        </p>
+        
+      </div>
+      <div class="w-full flex  mt-3 xl:pt-0 gap-5 items-center flex-col sm:flex-row lg:flex-col xl:flex-row justify-between px-5">
+        <div class="flex flex-row sm:flex-col lg:flex-row xl:flex-col gap-2 w-full">
+          <div
+            class="bg-[#FF3333] w-fit bg-opacity-50 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#FF3333] texw"
+          >
+            CMS
+          </div>
+          <div
+            class="bg-[#3ebff8] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#3ebff8]"
+          >
+            SEO
+          </div>
+        </div>
+        <div class=" max-h-64 max-w-72 overflow-hidden">
+          <img
+            class="w-full h-full object-cover"
+            src="/shots/hyfhouses.webp"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</article>

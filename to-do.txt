@@ -1,10 +1,19 @@
 to-do ❌:
-- reducir tamaño de imagenes
-- pagina proyectos
 - seo (descripciones, ...)
+- tooltips en tecnologias
+- 100 en Lighthouse
+- Metainfo pagina completa
 
 Done ✅:
+22/6
+- reducir tamaño de imagenes
 - cambiar foto
 - links de proyectos
 - traducir etiquetas
 - cambiar correo por CV
+
+23/6
+- pagina proyectos
+- sombra/borde en el navbar (por lo menos en móvil)
+- bug responsive (ntoas iphone)
+

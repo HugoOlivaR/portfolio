@@ -15,6 +15,9 @@ export const ui = {
     "skills": "Skills",
 
     "networks": "Networks",
+    "big-project": "BIG",
+    "medium-project": "Medium",
+    "small-project": "Tiny",
 
     "experience-title": "Experience",
     "experience.0.title": "Frontend Developer",
@@ -34,13 +37,28 @@ export const ui = {
     "experience.1.description4": "- Gained experience in networks and server infrastructure.",
 
 
+    "personal-projects": "Personal Projects",
+    "client-projects": "Client Projects",
 
     "projects-title": "Projects",
+
     "projects.0.title": "SparkCollab",
     "projects.0.description": "Full-stack application designed to facilitate collaboration among students, entrepreneurs, and self-taught individuals. Thanks to its modern stack, SparkCollab ensures a fast, responsive, and seamless user experience.",
 
+    "projects.3.title": "Portfolio",
+    "projects.3.description": "My personal portfolio developed with Astro and TailwindCSS. It is a responsive and accessible web. It also has support for multiple languages and themes.",
+
     "projects.1.title": "Zentunes",
     "projects.1.description": "Simple web application that allows users listen some relaxing sounds such as rain, fire, waves and forest. It was developed using vanilla JavaScript, HTML and CSS.",
+
+    "projects.2.title": "H-Clock",
+    "projects.2.description": "Minimalist digital clock developed with HTML, CSS and JavaScript. It features light and dark theme. This was my first web where I implemented JavaScript.",
+
+    "projects.4.title": "Élite Voltaje",
+    "projects.4.description": "Electricity company web. Developed with a CMS. It is a responsive and accessible web. Focused on SEO positioning.",
+
+    "projects.5.title": "H&F Houses",
+    "projects.5.description": "Real estate web. Developed with a CMS. With contact forms to be able to connect with clients. Focused on SEO positioning.",
 
     "see-more": "See more",
 
@@ -69,6 +87,9 @@ export const ui = {
     "skills": "Habilidades",
 
     "networks": "Redes",
+    "big-project": "Grande",
+    "medium-project": "Mediano",
+    "small-project": "Pequeño",
 
     "experience-title": "Experiencia",
     "experience.0.title": "Desarrollador Frontend",
@@ -86,13 +107,28 @@ export const ui = {
     "experience.1.description3": "- Configuración y gestión de servidores NGINX.",
     "experience.1.description4": "- Experiencia en redes e infraestructura de servidores.",
 
+    "personal-projects": "Proyectos Personales",
+    "client-projects": "Proyectos de Clientes",
 
     "projects-title": "Proyectos",
+
     "projects.0.title": "SparkCollab",
     "projects.0.description": "Aplicación full-stack diseñada para facilitar la colaboración entre estudiantes, emprendedores y autodidactas. Gracias a su stack moderno, SparkCollab garantiza una experiencia de usuario rápida, receptiva y sin problemas.",
 
+    "projects.3.title": "Portfolio",
+    "projects.3.description": "Mi portfolio personal desarrollado con Astro y TailwindCSS. Es una web responsive y accesible. También cuenta con soporte para múltiples idiomas y temas.",
+
     "projects.1.title": "Zentunes",
     "projects.1.description": "Sencilla aplicación web que permite a los usuarios escuchar algunos sonidos relajantes como la lluvia, el fuego, las olas o el bosque. Fue desarrollado usando JavaScript, HTML y CSS.",
+
+    "projects.2.title": "H-Clock",
+    "projects.2.description": "Reloj digital minimalista desarrollado con HTML, CSS y JavaScript. Cuenta con tema claro y oscuro. Esta fue mi primera web en la que implementé JavaScript.",
+
+    "projects.4.title": "Élite Voltaje",
+    "projects.4.description": "Web de una empresa de electricidad. Desarrollada con un CMS. Es una web responsive y accesible. Centrado en el posicionamiento SEO.",
+
+    "projects.5.title": "H&F Houses",
+    "projects.5.description": "Web de una inmobiliaria. Desarrollada con un CMS. Con formularios de contacto para poder conectar con los clientes. Centrado en el posicionamiento SEO.",
 
     "see-more": "Ver más",
 
