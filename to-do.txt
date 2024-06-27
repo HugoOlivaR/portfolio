@@ -3,6 +3,8 @@ to-do ❌:
 - tooltips en tecnologias
 - 100 en Lighthouse
 - Metainfo pagina completa
+- analitics
+- imagenes lentas (webs clientes)
 
 Done ✅:
 22/6
@@ -17,3 +19,7 @@ Done ✅:
 - sombra/borde en el navbar (por lo menos en móvil)
 - bug responsive (ntoas iphone)
 
+
+27/6
+- tooltips en tecnologias
+- analitics
