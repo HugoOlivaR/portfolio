@@ -21,7 +21,7 @@ console.log(currentLocale);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/ico" href="/icon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
 
@@ -38,18 +38,48 @@ console.log(currentLocale);
       gtag("config", "G-11G1JWL605");
     </script>
 
-    <meta name="description" content="Hugo Oliva | Web Developer and Designer. Professional portfolio showcasing innovative projects and creative tech solutions. Explore my work!" />
+    <!-- Meta Description -->
+    <meta name="description" content="Hugo Oliva | Desarrollador Web y Diseñador. Portafolio profesional con proyectos innovadores y soluciones tecnológicas creativas. ¡Explora mi trabajo!" />
 
-    <meta name="keywords" content="developer, programer, designer" />
+    <!-- Palabras clave -->
+    <meta name="keywords" content="desarrollador, programador, diseñador" />
 
+    <!-- Autor de la página -->
     <meta name="author" content="Hugo Oliva" />
 
+    <!-- Derechos de autor -->
     <meta name="copyright" content="Hugo Oliva">
 
+    <!-- Control de caché -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
 
+    <!-- Open Graph para Facebook -->
+    <meta property="og:title" content="Título de la página" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="URL de la página" />
+    <meta property="og:image" content="URL de la imagen destacada" />
+    <meta property="og:description" content="Descripción breve de la página" />
+    <meta property="og:site_name" content="Nombre del sitio" />
+    <meta property="og:locale" content="es_ES" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@tuUsuarioTwitter" />
+    <meta name="twitter:creator" content="@tuUsuarioTwitter" />
+    <meta name="twitter:title" content="Título de la página" />
+    <meta name="twitter:description" content="Descripción breve de la página" />
+    <meta name="twitter:image" content="URL de la imagen destacada" />
+
+    <!-- Favicons para diferentes dispositivos y navegadores -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/path/to/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/path/to/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/path/to/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/path/to/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
   </head>
   <body>
     <slot />
