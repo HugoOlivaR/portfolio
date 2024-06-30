@@ -1,0 +1,133 @@
+---
+import { useTranslations, getLangFromUrl } from "../../i18n/utils.js";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section
+  class="border hover:border-orange-500 hover:shadow-xl dark:hover:shadow-stone-800 dark:hover:shadow-xl rounded-3xl w-full p-6 sm:p-10 flex flex-col gap-5 transition-all duration-300 ease-linear h-full"
+>
+  <div class="flex gap-3 items-center">
+    <div
+      class="py-[2px] px-[11px] border-orange-500 text-orange-500 border-4 rounded-full font-bold text-2xl h-fit"
+    >
+      3
+    </div>
+    <h2 class="text-3xl sm:text-4xl font-bold">{t("other-contact")}</h2>
+  </div>
+  <p class="text-xl">
+    {t("other-contact-description")}
+  </p>
+  <div class="flex gap-10 justify-center mt-10 w-full">
+    <div class="relative tooltip fade" data-title="hugoliva158@gmail.com">
+      <a
+        href="mailto:hugoliva158@gmail.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group"
+        aria-label="Open linkedin link"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          stroke="black"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-mail hover:scale-110 hover:stroke-orange-500 dark:hover:stroke-orange-500 duration-150 stroke-black dark:stroke-white"
+          width="60"
+          height="60"
+          viewBox="1 1 22 22"
+          stroke-width="1.5"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+            d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
+          ></path><path d="M3 7l9 6l9 -6"></path>
+        </svg>
+      </a>
+    </div>
+    <a
+      href="https://wa.link/nzk2nt"
+      id="whatsappLink"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group"
+      aria-label="Open linkedin link"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        stroke="black"
+        class="icon icon-tabler icons-tabler-outline icon-tabler-brand-whatsapp hover:scale-110 hover:stroke-orange-500 dark:hover:stroke-orange-500 duration-150 stroke-black dark:stroke-white"
+        width="60"
+        height="60"
+        viewBox="1 1 22 22"
+        stroke-width="1.5"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+          d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"></path><path
+          d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"
+        ></path>
+      </svg>
+    </a>
+    <a
+      href="https://www.linkedin.com/in/hugo-oliva-romero-88b246221/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="group"
+      aria-label="Open linkedin link"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        stroke="black"
+        class="icon icon-tabler icon-tabler-brand-linkedin hover:scale-110 hover:stroke-orange-500 dark:hover:stroke-orange-500 duration-150 stroke-black dark:stroke-white"
+        width="60"
+        height="60"
+        viewBox="1 1 22 22"
+        stroke-width="1.5"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path
+          d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+        ></path>
+        <path d="M8 11l0 5"></path>
+        <path d="M8 8l0 .01"></path>
+        <path d="M12 16l0 -5"></path>
+        <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+      </svg>
+    </a>
+    
+    
+  </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const wassLink = document.getElementById("whatsappLink");
+    if (wassLink && window.location.pathname.includes("/es/")) {
+      wassLink.setAttribute("href", "https://wa.link/89u2c2");
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var tooltips = document.querySelectorAll('.tooltip');
+
+    tooltips.forEach(function (tooltip) {
+      tooltip.addEventListener('click', function () {
+        // Añade la clase 'show' para mostrar el tooltip
+        tooltip.classList.add('show');
+
+        // Remueve la clase 'show' después de 3 segundos
+        setTimeout(function () {
+          tooltip.classList.remove('show');
+        }, 3000);
+      });
+    });
+  });
+</script>
+

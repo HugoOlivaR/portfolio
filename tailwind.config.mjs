@@ -10,6 +10,7 @@ export default {
         light: "#FFFFFF",
         blue: "#13A5FB",
       },
+      borderColor: ['focus'],
     },
   },
   plugins: [],

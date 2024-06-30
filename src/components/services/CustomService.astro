@@ -1,0 +1,113 @@
+---
+import { useTranslations, getLangFromUrl } from "../../i18n/utils.js";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section
+  class="border hover:border-blue hover:shadow-xl dark:hover:shadow-stone-800 dark:hover:shadow-xl rounded-3xl w-full p-6 sm:p-10 flex flex-col gap-5 transition-all duration-300 ease-linear"
+>
+  <div class="flex gap-3 items-center">
+    <div
+      class="py-[2px] px-[11px] border-blue text-blue border-4 rounded-full font-bold text-2xl h-fit"
+    >
+      1
+    </div>
+    <h2 class="text-3xl sm:text-4xl font-bold">{t("custom-services")}</h2>
+  </div>
+  <p class="text-xl">
+    {t("custom-services-description")}
+  </p>
+  <form
+    id="contact-form"
+    action="https://formspree.io/f/xqazkkyl"
+    method="post"
+    class="flex flex-col gap-4"
+  >
+    <label for="name" class="text-xl font-bold">{t("form-name")} *</label>
+    <input
+      required
+      type="text"
+      id="name"
+      name="name"
+      class="p-2 border-2 border-black dark:border-white bg-white dark:bg-darkLight rounded-md"
+    />
+    <label for="email" class="text-xl font-bold">{t("form-email")} *</label>
+    <input
+      required
+      type="email"
+      id="email"
+      name="email"
+      class="p-2 border-2 border-black dark:border-white bg-white dark:bg-darkLight rounded-md"
+    />
+    <label for="message" class="text-xl font-bold">{t("form-message")} *</label>
+    <textarea
+      required
+      id="message"
+      name="message"
+      placeholder={t("form-message-placeholder")}
+      class="p-2 border-2 border-black dark:border-white bg-white dark:bg-darkLight rounded-md h-28"
+    ></textarea>
+    <button
+      type="submit"
+      class="bg-black mt-8 dark:bg-white dark:border dark:border-white dark:text-black text-white font-bold py-2 rounded-md hover:text-blue dark:hover:text-blue duration-200"
+    >
+      {t("form-submit")}
+    </button>
+    <div id="form-message" class="hidden mt-4 text-green-500 text-xl font-bold">
+      Message Sent!
+    </div>
+  </form>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById(
+      "contact-form"
+    ) as HTMLFormElement | null;
+    const formMessage = document.getElementById(
+      "form-message"
+    ) as HTMLDivElement | null;
+
+    if (form && formMessage) {
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita la redirección por defecto del formulario
+
+        const formData = new FormData(form);
+
+        // Realiza la solicitud POST a Formspree sin redirigir
+        fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            if (response.ok) {
+              // Si la respuesta es exitosa, resetea el formulario y muestra un mensaje
+              form.reset();
+              formMessage.classList.remove("hidden");
+              formMessage.textContent = "Message Sent!";
+              formMessage.classList.remove("text-red-500");
+              formMessage.classList.add("text-green-500");
+            } else {
+              // Si hay un error, muestra un mensaje de error
+              formMessage.classList.remove("hidden");
+              formMessage.textContent = "Error sending the message";
+              formMessage.classList.remove("text-green-500");
+              formMessage.classList.add("text-red-500");
+            }
+          })
+          .catch((error) => {
+            // Maneja cualquier error de la red
+            formMessage.classList.remove("hidden");
+            formMessage.textContent = "Error sending the message";
+            formMessage.classList.remove("text-green-500");
+            formMessage.classList.add("text-red-500");
+          });
+      });
+    }
+  });
+</script>

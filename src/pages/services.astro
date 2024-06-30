@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/NavBar.astro";
+import Custom from '../components/services/CustomService.astro';
+import Fiverr from '../components/services/FiverrService.astro';
+import Contact from '../components/services/Contact.astro';
+import { useTranslations, getLangFromUrl } from "../i18n/utils.js";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+---
+
+
+<Layout title="Hugo Oliva | Services">
+  <div
+    class="h-[68px] fixed w-full backdrop-blur-sm z-10 flex items-center justify-center"
+  >
+    <Navbar />
+  </div>
+  <main class="py-20 px-4 sm:px-8 2xl:px-28 flex flex-col gap-10">
+    <h1 class="text-4xl md:text-5xl xl:text-7xl font-bold">{t("services-h1.1")}<br>{t("services-h1.2")}</h1>
+    <div class="flex flex-col lg:flex-row justify-between gap-10">
+      <Custom />
+      <div class="flex flex-col gap-10 w-full">
+        <Fiverr />
+        <Contact />
+      </div>
+    </div>
+  </main>
+</Layout>

@@ -19,6 +19,7 @@ console.log(currentLocale);
 
 <html lang={currentLocale} id="htmlElement">
   <head>
+    <link rel="stylesheet" href="/css/main.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -54,71 +55,8 @@ console.log(currentLocale);
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-
-    <!-- Open Graph para Facebook -->
-    <meta property="og:title" content="Título de la página" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="URL de la página" />
-    <meta property="og:image" content="URL de la imagen destacada" />
-    <meta property="og:description" content="Descripción breve de la página" />
-    <meta property="og:site_name" content="Nombre del sitio" />
-    <meta property="og:locale" content="es_ES" />
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@tuUsuarioTwitter" />
-    <meta name="twitter:creator" content="@tuUsuarioTwitter" />
-    <meta name="twitter:title" content="Título de la página" />
-    <meta name="twitter:description" content="Descripción breve de la página" />
-    <meta name="twitter:image" content="URL de la imagen destacada" />
-
-    <!-- Favicons para diferentes dispositivos y navegadores -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/path/to/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/path/to/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/path/to/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/path/to/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
   </head>
   <body>
     <slot />
   </body>
 </html>
-<style is:global>
-  html.dark {
-    color-scheme: dark;
-  }
-
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    background-image: url("/whiteDots.svg");
-    background-repeat: repeat;
-    background-position: center;
-  }
-
-  html.dark body {
-    background-image: url("/blackDots.svg");
-  }
-
-  ::-webkit-scrollbar {
-    width: 5px;
-  }
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #e5e7eb;
-    border-radius: 5px;
-  }
-
-  html.dark ::-webkit-scrollbar-thumb {
-    background: #1e1e1e; /* Cambia #374151 por el color que prefieras para el tema oscuro */
-    border-radius: 5px;
-  }
-  /* Cambia el color del pulgar de la barra de desplazamiento al pasar el ratón */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-</style>

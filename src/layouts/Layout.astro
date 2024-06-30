@@ -19,6 +19,7 @@ console.log(currentLocale);
 
 <html lang={currentLocale} id="htmlElement">
   <head>
+    <link rel="stylesheet" href="/css/main.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/ico" href="/icon.ico" />
@@ -55,40 +56,3 @@ console.log(currentLocale);
     <slot />
   </body>
 </html>
-<style is:global>
-  html.dark {
-    color-scheme: dark;
-  }
-
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    background-image: url("/whiteDots.svg");
-    background-repeat: repeat;
-    background-position: center;
-  }
-
-  html.dark body {
-    background-image: url("/blackDots.svg");
-  }
-
-  ::-webkit-scrollbar {
-    width: 5px;
-  }
-  ::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #e5e7eb;
-    border-radius: 5px;
-  }
-
-  html.dark ::-webkit-scrollbar-thumb {
-    background: #1e1e1e; /* Cambia #374151 por el color que prefieras para el tema oscuro */
-    border-radius: 5px;
-  }
-  /* Cambia el color del pulgar de la barra de desplazamiento al pasar el ratón */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-</style>

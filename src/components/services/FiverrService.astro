@@ -1,0 +1,30 @@
+---
+import { useTranslations, getLangFromUrl } from "../../i18n/utils.js";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section
+  class="border hover:border-emerald-500 hover:shadow-xl dark:hover:shadow-stone-800 dark:hover:shadow-xl rounded-3xl w-full p-6 sm:p-10 flex flex-col gap-5 transition-all duration-300 ease-linear"
+>
+  <div class="flex gap-3 items-center">
+    <div
+      class="py-[2px] px-[11px] border-emerald-500 text-emerald-500 border-4 rounded-full font-bold text-2xl h-fit"
+    >
+      2
+    </div>
+    <h2 class="text-3xl sm:text-4xl font-bold">{t("ready-made-services")}</h2>
+  </div>
+  <p class="text-xl">
+    {t("ready-made-services-description")}
+  </p>
+  <a
+    href="https://es.fiverr.com/hugoolivar/make-your-static-website"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="bg-black mt-5 dark:bg-white dark:border dark:border-white dark:text-black text-white font-bold py-2 rounded-md hover:text-emerald-500 dark:hover:text-emerald-500 duration-200 text-center"
+  >
+  {t("visit-fiverr")}
+  </a>
+</section>

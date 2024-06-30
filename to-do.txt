@@ -1,3 +1,6 @@
+To-Do ❌:
+
+
 Done ✅:
 22/6
 - reducir tamaño de imagenes
@@ -17,3 +20,12 @@ Done ✅:
 - analitics
 - seo (descripciones, ...)
 - 100 en Lighthouse (no llega pero no he conseguido más)
+
+
+29/6
+- pagina de servicios (contacto - fiverr)
+- link whatsapp (ambos idiomas)
+
+30/6
+- funcionalidad formulario
+- check del boton del formulario cuando se haya mandado

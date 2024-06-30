@@ -77,7 +77,31 @@ export const ui = {
     "education.2.description": "Vocational Education and Training Microcomputer systems and networks.",
     
     "education.3.title": "Always learning",
-    "education.3.description": "Constantly learning new things to feed my knowledge and let me learn."
+    "education.3.description": "Constantly learning new things to feed my knowledge and let me learn.",
+
+
+    "services-tittle": "Services",
+    "services-h1.1" : "Discover My",
+    "services-h1.2" : "Web Development Services 🌐",
+
+    "custom-services": "Custom Services",
+    "custom-services-description": "Fill out the form so I can contact you to understand your needs and be able to offer you the best service. 🎯",
+
+    "form-name": "Name",
+    "form-email": "Email",
+    "form-message": "Message",
+    "form-message-placeholder": "Example: I need a website for my business. I would like it to be modern and responsive. I want to know more about your services.",
+    "form-submit": "Submit",
+
+    "form-submit-success": "Message sent successfully! 🚀",
+    "form-submit-error": "An error occurred while sending the message. Please try again later. 🚧",
+
+    "ready-made-services": "Ready-made Services",
+    "ready-made-services-description": "Explore my ready-made services available on Fiverr. These packages are designed to provide quick and efficient solutions, with clear specifications and pricing, ready for you to order. 🛠️",
+    "visit-fiverr": "Visit Fiverr",
+
+    "other-contact": "Other Ways to Connect",
+    "other-contact-description": "If you prefer to reach out through other methods, feel free to contact me 📧",
   },
   es: {
     "intro": "Hola 👋",
@@ -147,6 +171,26 @@ export const ui = {
     "education.2.description": "Formación Profesional de Grado Medio en sistemas microinformáticos y redes.",
 
     "education.3.title": "Siempre aprendiendo",
-    "education.3.description": "Constantemente aprendiendo cosas nuevas para alimentar mi conocimiento y permitirme crecer."
+    "education.3.description": "Constantemente aprendiendo cosas nuevas para alimentar mi conocimiento y permitirme crecer.",
+
+    "services-tittle": "Servicios",
+    "services-h1.1" : "Descubre mis",
+    "services-h1.2" : "Servicios de Desarrollo Web 🌐",
+
+    "custom-services": "Servicios Personalizados",
+    "custom-services-description": "Rellena el formulario para que pueda contactarte, entender tus necesidades y ofrecerte el mejor servicio especifico para tí. 🎯",
+
+    "form-name": "Nombre",
+    "form-email": "Correo",
+    "form-message": "Mensaje",
+    "form-message-placeholder": "Ejemplo: Necesito una web para mi negocio. Me gustaría que fuera moderna y responsive. Quiero saber más sobre tus servicios.",
+    "form-submit": "Enviar",
+
+    "ready-made-services": "Servicios Prediseñados",
+    "ready-made-services-description": "Explora mis servicios listos disponibles en Fiverr. Estos paquetes están diseñados para proporcionar soluciones rápidas y eficientes, con especificaciones y precios claros, listos para que los pidas. 🛠️",
+    "visit-fiverr": "Visitar Fiverr",
+
+    "other-contact": "Otras Formas de Conectar",
+    "other-contact-description": "Si prefieres conectar conmigo a través de otros métodos, no dudes en contactarme para lo que necesites. 📧",
   },
 };
