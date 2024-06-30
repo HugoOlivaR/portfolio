@@ -186,6 +186,9 @@ export const ui = {
     "form-message-placeholder": "Ejemplo: Necesito una web para mi negocio. Me gustaría que fuera moderna y responsive. Quiero saber más sobre tus servicios.",
     "form-submit": "Enviar",
 
+    "form-submit-success": "¡Mensaje enviado con éxito! 🚀",
+    "form-submit-error": "Ocurrió un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde. 🚧",
+
     "ready-made-services": "Servicios Prediseñados",
     "ready-made-services-description": "Explora mis servicios listos disponibles en Fiverr. Estos paquetes están diseñados para proporcionar soluciones rápidas y eficientes, con especificaciones y precios claros, listos para que los pidas. 🛠️",
     "visit-fiverr": "Visitar Fiverr",
