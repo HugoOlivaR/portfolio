@@ -1,83 +1,995 @@
-<!DOCTYPE html> <html lang="en"> <head><meta charset="UTF-8"><meta name="description" content="Astro description"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v4.6.4"><title>Hugo Oliva | Dev Portfolio</title><link rel="stylesheet" href="/portfolio/_astro/index.CB-jpOxA.css"><script type="module">document.addEventListener("DOMContentLoaded",()=>{localStorage.getItem("theme")==="dark"&&document.documentElement.classList.add("dark")});
-</script></head> <body>  <header class="relative md:fixed top-0 flex flex-col items-center w-full md:w-2/5 px-5 sm:px-10 pt-20 2xl:pt-24 md:border-r-2 border-gray-100 dark:border-darkLight gap-5 min-h-screen z-10 md:bg-white dark:md:bg-dark bg-transparent md:overflow-y-auto md:h-screen pb-10"> <script type="module">
-  function toggleTheme() {
-    document.documentElement.classList.toggle("dark");
-    const isDarkMode = document.documentElement.classList.contains("dark");
-    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
-    const themeToggleIcon = document.querySelector(".theme-toggle svg");
-    setThemeIcon();
-  }
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content="Astro v4.6.4" />
+    <title>Hugo Oliva | Dev Portfolio</title>
+    <link rel="stylesheet" href="/portfolio/_astro/index.CB-jpOxA.css" />
+    <script type="module">
+      document.addEventListener("DOMContentLoaded", () => {
+        localStorage.getItem("theme") === "dark" &&
+          document.documentElement.classList.add("dark");
+      });
+    </script>
+  </head>
+  <body>
+    <header
+      class="relative md:fixed top-0 flex flex-col items-center w-full md:w-2/5 px-5 sm:px-10 pt-20 2xl:pt-24 md:border-r-2 border-gray-100 dark:border-darkLight gap-5 min-h-screen z-10 md:bg-white dark:md:bg-dark bg-transparent md:overflow-y-auto md:h-screen pb-10"
+    >
+      <script type="module">
+        function toggleTheme() {
+          document.documentElement.classList.toggle("dark");
+          const isDarkMode =
+            document.documentElement.classList.contains("dark");
+          localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+          const themeToggleIcon = document.querySelector(".theme-toggle svg");
+          setThemeIcon();
+        }
 
-  const setThemeIcon = () => {
-    const themeToggleIcon = document.getElementById('themeToggleIcon');
-    const isDarkMode = localStorage.getItem('theme') === 'dark';
+        const setThemeIcon = () => {
+          const themeToggleIcon = document.getElementById("themeToggleIcon");
+          const isDarkMode = localStorage.getItem("theme") === "dark";
 
-    if (isDarkMode) {
-      themeToggleIcon.innerHTML = `<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>`;
-    } else {
-      themeToggleIcon.innerHTML = `<path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />`;
-    }
-  }
+          if (isDarkMode) {
+            themeToggleIcon.innerHTML = `<path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>`;
+          } else {
+            themeToggleIcon.innerHTML = `<path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />`;
+          }
+        };
 
-  // Ejecutar setThemeIcon al cargar el componente
-  if (typeof window !== 'undefined') {
-    window.onload = setThemeIcon;
-  }
+        // Ejecutar setThemeIcon al cargar el componente
+        if (typeof window !== "undefined") {
+          window.onload = setThemeIcon;
+        }
 
-  function changeLanguage() {
-    const currentUrl = window.location.pathname;
-    const isSpanish = currentUrl.startsWith('/es');
-    const newPath = isSpanish ? currentUrl.substring(3) : '/es' + currentUrl;
-    window.location.href = newPath;
-  }
+        function changeLanguage() {
+          const currentUrl = window.location.pathname;
+          const isSpanish = currentUrl.startsWith("/es");
+          const newPath = isSpanish
+            ? currentUrl.substring(3)
+            : "/es" + currentUrl;
+          window.location.href = newPath;
+        }
 
-
-  document.addEventListener("DOMContentLoaded", () => {
-    const themeToggle = document.querySelector(".theme-toggle");
-    if (themeToggle) {
-      themeToggle.addEventListener("click", toggleTheme);
-    }
-    const languageToggle = document.querySelector(".change-language");
-    if (languageToggle) {
-      languageToggle.addEventListener("click", () => changeLanguage("es"));
-    }
-  });
-</script> <nav class="flex justify-center items-center h-[50px] backdrop-blur-sm fixed top-0 z-10 bg-gray-100 dark:bg-darkLight mt-2 px-5 rounded-full"> <ul class="flex gap-5 text-lg"> <li> <a class="hover:text-blue ease-out duration-100 transition text-blue" href="/portfolio/"> Home </a> </li><li> <a class="hover:text-blue ease-out duration-100 transition text-black dark:text-white" href="/portfolio/projects/"> Projects </a> </li> <li class="flex items-center cursor-pointer theme-toggle"> <svg id="themeToggleIcon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-sun"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path> </svg> </li> <li class="flex items-end cursor-pointer change-language"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-language"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M4 5h7"></path> <path d="M9 3v2c0 4.418 -2.239 8 -5 8"></path> <path d="M5 9c0 2.144 2.952 3.908 6.7 4"></path> <path d="M12 20l4 -9l4 9"></path> <path d="M19.1 18h-6.2"></path> </svg> </li> </ul> </nav> <section class="flex flex-col sm:flex-row md:flex-col 2xl:flex-row md:justify-between w-full items-start sm:items-center md:items-start 2xl:items-center gap-5 2xl:gap-0"> <h1 class="text-4xl sm:text-5xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold order-2 2xl:order-1">Hello 👋<br> I&#39;m Hugo Oliva</h1> <div class="order-1 2xl:order-2"> <span class="size-40 2xl:size-52 bg-gray-700/60 border border-gray-100 shadow-lg rounded-full block relative overflow-hidden"><img alt="avatar" sizes="100vw" srcset="https://yt3.googleusercontent.com/Km7pt-NmSLxHB8bo1AqpbtoSe6jhNqWi4i0M7SOf-0qNNMcmVIoFAoaPntHbH7J7F7j6qiUnBA=s176-c-k-c0x00ffffff-no-rj" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.2d4d367d.png&w=3840&q=30" decoding="async" data-nimg="fill" class="rounded-full drop-shadow-2xl scale-125" style="position:absolute;top:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:cover"> </span> </div> </section> <section class="flex flex-col 2xl:flex-row w-full gap-5 2xl:gap-5 items-start justify-between"> <p class="text-lg sm:text-xl 2xl:text-2xl"> Frontend Developer with a strong passion for details. Specialized in React and committed to excellence in every project. </p> <div class="px-0 2xl:px-5 flex justify-center items-center"> <div class="flex gap-3 h-fit transition-all"> <a href="https://github.com/HugoOlivaR" target="_blank" rel="noopener noreferrer" class="group"> <svg xmlns="http://www.w3.org/2000/svg" stroke="black" class="icon icon-tabler icon-tabler-brand-github hover:scale-110 hover:stroke-blue dark:hover:stroke-blue duration-150 stroke-black dark:stroke-white" width="45" height="45" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path> </svg> </a> <a href="https://www.linkedin.com/in/hugo-oliva-romero-88b246221/" target="_blank" rel="noopener noreferrer" class="group"> <svg xmlns="http://www.w3.org/2000/svg" stroke="black" class="icon icon-tabler icon-tabler-brand-linkedin hover:scale-110 hover:stroke-blue dark:hover:stroke-blue duration-150 stroke-black dark:stroke-white" width="45" height="45" viewBox="1 1 22 22" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path> <path d="M8 11l0 5"></path> <path d="M8 8l0 .01"></path> <path d="M12 16l0 -5"></path> <path d="M16 16v-3a2 2 0 0 0 -4 0"></path> </svg> </a> <a href="mailto:hugoliva158@gmail.com" class="group"> <svg xmlns="http://www.w3.org/2000/svg" stroke="black" class="icon icon-tabler icon-tabler-brand-mail hover:scale-110 hover:stroke-blue dark:hover:stroke-blue duration-150 stroke-black dark:stroke-white" width="45" height="45" viewBox="0 0 24 24" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"> <path stroke="none" d="M0 0h24v24H0z" fill="none"></path> <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path> <path d="M3 7l9 6l9 -6"></path> </svg> </a> </div> </div> </section> <section class="w-full mt-5 2xl:mt-10"> <h2 class="text-3xl sm:text-4xl font-bold">Skills:</h2> <div class="flex flex-wrap gap-5 mt-7"> <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 items-center p-5 border rounded-2xl bg-white dark:bg-darkLight"> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler hover:scale-110 duration-100 stroke-[#fc4f13] icons-tabler-outline icon-tabler-brand-html5"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path><path d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler hover:scale-110 duration-100 stroke-[#3d9dd7] icons-tabler-outline icon-tabler-brand-css3"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path><path d="M8.5 8h7l-4.5 4h4l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler hover:scale-110 duration-100 stroke-[#f7e025] icons-tabler-outline icon-tabler-brand-javascript"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path><path d="M7.5 8h3v8l-2 -1"></path><path d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler hover:scale-110 duration-100 stroke-[#377cc8] icons-tabler-outline icon-tabler-brand-typescript"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M15 17.5c.32 .32 .754 .5 1.207 .5h.543c.69 0 1.25 -.56 1.25 -1.25v-.25a1.5 1.5 0 0 0 -1.5 -1.5a1.5 1.5 0 0 1 -1.5 -1.5v-.25c0 -.69 .56 -1.25 1.25 -1.25h.543c.453 0 .887 .18 1.207 .5"></path><path d="M9 12h4"></path><path d="M11 12v6"></path><path d="M21 19v-14a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2 -2z"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler hover:scale-110 duration-100 stroke-[#66dbfb] icons-tabler-outline icon-tabler-brand-react"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102"></path><path d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102"></path><path d="M6.305 15.287c-.676 2.615 -.485 4.693 .695 5.373c1.913 1.105 5.703 -1.877 8.464 -6.66c.387 -.67 .733 -1.339 1.036 -2"></path><path d="M17.694 8.716c.677 -2.616 .487 -4.696 -.694 -5.376c-1.913 -1.105 -5.703 1.877 -8.464 6.66c-.387 .67 -.733 1.34 -1.037 2"></path><path d="M12 5.424c-1.925 -1.892 -3.82 -2.766 -5 -2.084c-1.913 1.104 -1.226 5.877 1.536 10.66c.386 .67 .793 1.304 1.212 1.896"></path><path d="M12 18.574c1.926 1.893 3.821 2.768 5 2.086c1.913 -1.104 1.226 -5.877 -1.536 -10.66c-.375 -.65 -.78 -1.283 -1.212 -1.897"></path><path d="M11.5 12.866a1 1 0 1 0 1 -1.732a1 1 0 0 0 -1 1.732z"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler hover:scale-110 duration-100 stroke-[#cecece] icons-tabler-outline icon-tabler-brand-nextjs"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 15v-6l7.745 10.65a9 9 0 1 1 2.255 -1.993"></path><path d="M15 12v-3"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler hover:scale-110 duration-100 stroke-[#6620bd] icons-tabler-outline icon-tabler-brand-astro"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M14.972 3.483c.163 .196 .247 .46 .413 .987l3.64 11.53a15.5 15.5 0 0 0 -4.352 -1.42l-2.37 -7.723a.31 .31 0 0 0 -.296 -.213a.31 .31 0 0 0 -.295 .214l-2.342 7.718a15.5 15.5 0 0 0 -4.37 1.422l3.657 -11.53c.168 -.527 .251 -.79 .415 -.986c.144 -.172 .331 -.306 .544 -.388c.242 -.094 .527 -.094 1.099 -.094h2.612c.572 0 .858 0 1.1 .094c.213 .082 .4 .217 .545 .39"></path><path d="M9 18c0 1.5 2 3 3 4c1 -1 3 -3 3 -4q -3 1.5 -6 0"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler hover:scale-110 duration-100 stroke-[#3ebff8] icons-tabler-outline icon-tabler-brand-tailwind"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M11.667 6c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 2 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968zm-4 6.5c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 1.975 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968z"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler hover:scale-110 duration-100 stroke-[#ff4d89] icons-tabler-outline icon-tabler-brand-storybook"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 4l.5 16.5l13.5 .5v-18z"></path><path d="M9 15c.6 1.5 1.639 2 3.283 2h-.283c1.8 0 3 -.974 3 -2.435c0 -1.194 -.831 -1.799 -2.147 -2.333l-1.975 -.802c-1.15 -.467 -1.878 -1.422 -1.878 -2.467c0 -.97 .899 -1.786 2.087 -1.893l.613 -.055c1.528 -.138 3 .762 3.3 1.985"></path><path d="M16 3.5v1"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler hover:scale-110 duration-100 stroke-[#77c832] icons-tabler-outline icon-tabler-brand-nodejs"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 9v8.044a2 2 0 0 1 -2.996 1.734l-1.568 -.9a3 3 0 0 1 -1.436 -2.561v-6.635a3 3 0 0 1 1.436 -2.56l6 -3.667a3 3 0 0 1 3.128 0l6 3.667a3 3 0 0 1 1.436 2.561v6.634a3 3 0 0 1 -1.436 2.56l-6 3.667a3 3 0 0 1 -3.128 0"></path><path d="M17 9h-3.5a1.5 1.5 0 0 0 0 3h2a1.5 1.5 0 0 1 0 3h-3.5"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler hover:scale-110 duration-100 stroke-[#f05539] icons-tabler-outline icon-tabler-brand-git"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M16 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path d="M12 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path d="M12 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path d="M12 15v-6"></path><path d="M15 11l-2 -2"></path><path d="M11 7l-1.9 -1.9"></path><path d="M13.446 2.6l7.955 7.954a2.045 2.045 0 0 1 0 2.892l-7.955 7.955a2.045 2.045 0 0 1 -2.892 0l-7.955 -7.955a2.045 2.045 0 0 1 0 -2.892l7.955 -7.955a2.045 2.045 0 0 1 2.892 0z"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler hover:scale-110 duration-100 stroke-[#55ad47] icons-tabler-outline icon-tabler-brand-mongodb"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 3v19"></path><path d="M18 11.227c0 3.273 -1.812 4.77 -6 9.273c-4.188 -4.503 -6 -6 -6 -9.273c0 -4.454 3.071 -6.927 6 -9.227c2.929 2.3 6 4.773 6 9.227z"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler hover:scale-110 duration-100 stroke-[#08668e] icons-tabler-outline icon-tabler-brand-mysql"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M13 21c-1.427 -1.026 -3.59 -3.854 -4 -6c-.486 .77 -1.501 2 -2 2c-1.499 -.888 -.574 -3.973 0 -6c-1.596 -1.433 -2.468 -2.458 -2.5 -4c-3.35 -3.44 -.444 -5.27 2.5 -3h1c8.482 .5 6.421 8.07 9 11.5c2.295 .522 3.665 2.254 5 3.5c-2.086 -.2 -2.784 -.344 -3.5 0c.478 1.64 2.123 2.2 3.5 3"></path><path d="M9 7h.01"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler hover:scale-110 duration-100 stroke-[#a373ff] icons-tabler-outline icon-tabler-brand-vite"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M10 4.5l6 -1.5l-2 6.5l2 -.5l-4 7v-5l-3 1z"></path><path d="M15 6.5l7 -1.5l-10 17l-10 -17l7.741 1.5"></path></svg> <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler hover:scale-110 duration-100 stroke-[#fbbf75] icons-tabler-outline icon-tabler-brand-wix"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 9l1.5 6l1.379 -5.515a.64 .64 0 0 1 1.242 0l1.379 5.515l1.5 -6"></path><path d="M13 11.5v3.5"></path><path d="M16 9l5 6"></path><path d="M21 9l-5 6"></path><path d="M13 9h.01"></path></svg> </div> </div> </section> </header> <main class="p-5 sm:p-10 w-full md:w-3/5 relative md:absolute top-0 right-0 min-h-screen pt-20 2xl:pt-24 flex flex-col gap-20"> <section> <h3 class="text-4xl font-bold mb-10">🎯Experience</h3> <div class="flex flex-col gap-3 border-gray-200 border-l-4 mx-4 px-5 relative pb-14 w-full"> <div class="h-4 w-4 rounded-full border-2 border-blue bg-gray-200 dark:bg-darkLight absolute left-[-10px] top-3"></div> <div class="flex items-center justify-between 2xl:justify-start gap-5"> <h4 class="text-3xl">Frontend Developer</h4> <div class="flex flex-wrap gap-2 justify-end w-fit"> <div class="bg-[#66dbfb] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#66dbfb]">
-React
-</div> <div class="bg-[#cecece] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece]">
-NextJS
-</div> <div class="bg-[#3ebff8] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#3ebff8]">
-TailwindCSS
-</div> <div class="bg-[#ff4d89] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#ff4d89]">
-Storybook
-</div> </div> </div> <h5 class="text-2xl">Gorilast, Madrid - Spain</h5> <p class="text-xl">March 2024 - June 2024</p> <div> <p class="text-lg"> - Frontend of a food marketplace. </p> <p class="text-lg"> - Continuous integration and continuous deployment (CI/CD) using GitLab. </p> <p class="text-lg"> - Testing with Cypress &amp; Storybook. </p> </div> </div> <div class="flex flex-col gap-3 border-gray-200 border-l-4 mx-4 px-5 relative pb-5 w-full"> <div class="h-4 w-4 rounded-full border-2 border-blue bg-gray-200 dark:bg-darkLight absolute left-[-10px] top-3"></div> <div class="flex items-center justify-between 2xl:justify-start gap-5"> <h4 class="text-3xl">System Administrator</h4> <div class="flex flex-wrap gap-2 justify-end w-fit"> <div class="bg-[#ff9c0a] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#ff9c0a]">
-Vmware
-</div> <div class="bg-[#77c832] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#77c832]">
-Networks
-</div> </div> </div> <h5 class="text-2xl">HDT, Madrid - Spain</h5> <p class="text-xl">March 2022 - June 2022</p> <div> <p class="text-lg"> - Maintained windows servers. </p> <p class="text-lg"> - Learned and applied VMware for virtualization. </p> <p class="text-lg"> - Configured and managed NGINX servers. </p> <p class="text-lg"> - Gained experience in networks and server infrastructure. </p> </div> </div> </section> <section class="flex flex-col gap-10"> <h3 class="text-4xl font-bold">🚀 Projects</h3> <div class="flex flex-col xl:flex-row bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl duration-75 ease-linear group hover:shadow-lg cursor-default"> <div class="flex flex-col gap-6 px-5 relative pb-14 w-full"> <div class="flex items-center 2xl:justify-start gap-4"> <h4 class="text-3xl">SparkCollab</h4> <div class="flex flex-wrap gap-2 justify-end w-fit"> <div class="bg-[#cecece] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece] flex gap-1 items-center">
-Link
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-external-link stroke-black dark:stroke-white"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path><path d="M11 13l9 -9"></path><path d="M15 4h5v5"></path></svg> </div> <div class="bg-[#66dbfb] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#66dbfb]">
-Fullstack
-</div> </div> </div> <p class="text-lg"> Full-stack application designed to facilitate collaboration among students, entrepreneurs, and self-taught individuals. Thanks to its modern stack, SparkCollab ensures a fast, responsive, and seamless user experience. </p> <div class="flex gap-5"> <div class="flex flex-row xl:flex-col flex-wrap gap-2"> <div class="bg-[#77c832] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#77c832]">
-NodeJs
-</div> <div class="bg-[#f05539] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#f05539]">
-Express
-</div> <div class="bg-[#0eb6ff] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#0eb6ff]">
-MySQL
-</div> </div> <div class="w-1 h-26 bg-gray-200"></div> <div class="flex flex-row xl:flex-col flex-wrap gap-2"> <div class="bg-[#a373ff] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#a373ff]">
-Vite
-</div> <div class="bg-[#66dbfb] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#66dbfb]">
-React
-</div> <div class="bg-[#3ebff8] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#3ebff8]">
-Tailwind
-</div> </div> </div> </div> <div class="w-full flex justify-center xl:justify-end items-center"> <div class="w-fit h-64 2xl:h-72 overflow-hidden"> <img class="w-full h-full object-cover" src="../../public/shots/sparkcollab.png" alt=""> </div> </div> </div> <div class="flex flex-col xl:flex-row bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50  border pt-6 px-4 rounded-2xl duration-75 ease-linear group hover:shadow-lg cursor-default"> <div class="flex flex-col gap-6 px-5 relative pb-14 w-full"> <div class="flex items-center 2xl:justify-start gap-4"> <h4 class="text-3xl">Zentunes</h4> <div class="flex flex-wrap gap-2 justify-end w-fit"> <div class="bg-[#cecece] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece] flex gap-1 items-center">
-Link
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-external-link stroke-black dark:stroke-white"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path><path d="M11 13l9 -9"></path><path d="M15 4h5v5"></path></svg> </div> <div class="bg-[#bbe499] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#bbe499]">
-Frontend
-</div> </div> </div> <p class="text-lg"> Simple web application that allows users listen some relaxing sounds such as rain, fire, waves and forest. It was developed using vanilla JavaScript, HTML and CSS. </p> <div class="flex gap-5"> <div class="flex flex-row xl:flex-col gap-2"> <div class="bg-[#f7e025] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#f7e025]">
-JavaScript
-</div> <div class="bg-[#3d9dd7] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#3d9dd7]">
-CSS
-</div> <div class="bg-[#fc4f13] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#fc4f13]">
-HTML
-</div> </div> </div> </div> <div class="w-full flex justify-center xl:justify-end items-center"> <div class="w-fit h-64 2xl:h-72 overflow-hidden"> <img class="w-full h-full object-cover" src="../../public/shots/zentunes.png" alt=""> </div> </div> </div> <a href="/portfolio/projects/"><div class="cursor-pointer w-fit"> <p class="text-lg flex items-end gap-1 text-blue hover:underline"> See more <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12l14 0"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg> </p> </div></a> </section> <section class="flex flex-col gap-10"> <h3 class="text-4xl font-bold">🎓 Education</h3> <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-10"> <div class="flex flex-col xl:flex-row bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl w-full duration-75 ease-linear group hover:shadow-xl cursor-default"> <div class="flex flex-col gap-6 px-5 relative pb-10 w-full justify-start items-center duration-75 ease-linear group-hover:scale-105 "> <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brain"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M15.5 13a3.5 3.5 0 0 0 -3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8"></path><path d="M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1 -7 0v-1.8"></path><path d="M17.5 16a3.5 3.5 0 0 0 0 -7h-.5"></path><path d="M19 9.3v-2.8a3.5 3.5 0 0 0 -7 0"></path><path d="M6.5 16a3.5 3.5 0 0 1 0 -7h.5"></path><path d="M5 9.3v-2.8a3.5 3.5 0 0 1 7 0v10"></path></svg> <div class="flex flex-col gap-5 text-center"> <h4 class="text-3xl">AI Master&#39;s Degree</h4> <p> Artificial Intelligence and Big Data Master&#39;s Degree endorsed by the University of Murcia Spain. </p> <p>2023 - 2024</p> </div> </div> </div> <div class="flex flex-col xl:flex-row bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl w-full duration-75 ease-linear group hover:shadow-xl cursor-default"> <div class="flex flex-col gap-6 px-5 relative pb-10 w-full justify-start items-center duration-75 ease-linear group-hover:scale-105 "> <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-code"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M7 8l-4 4l4 4"></path><path d="M17 8l4 4l-4 4"></path><path d="M14 4l-4 16"></path></svg> <div class="flex flex-col gap-5 text-center"> <h4 class="text-3xl">Application Development Degree</h4> <p> Certificate of Higher Education cross-platform application development. </p> <p>2022 - 2024</p> </div> </div> </div> <div class="flex flex-col xl:flex-row bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl w-full duration-75 ease-linear group hover:shadow-xl cursor-default"> <div class="flex flex-col gap-6 px-5 relative pb-10 w-full justify-start items-center duration-75 ease-linear group-hover:scale-105 "> <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-devices-pc"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M3 5h6v14h-6z"></path><path d="M12 9h10v7h-10z"></path><path d="M14 19h6"></path><path d="M17 16v3"></path><path d="M6 13v.01"></path><path d="M6 16v.01"></path></svg> <div class="flex flex-col gap-5 text-center"> <h4 class="text-3xl">Sistems and Networks Degree</h4> <p> Vocational Education and Training Microcomputer systems and networks. </p> <p>2020 - 2022</p> </div> </div> </div> <div class="flex flex-col xl:flex-row bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl w-full duration-75 ease-linear group hover:shadow-xl cursor-default"> <div class="flex flex-col gap-6 px-5 relative pb-10 w-full justify-start items-center duration-75 ease-linear group-hover:scale-105 "> <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path></svg> <div class="flex flex-col gap-5 text-center"> <h4 class="text-3xl">Always learning</h4> <p> Constantly learning new things to feed my knowledge and let me learn. </p> </div> </div> </div> </div> </section> </main>  </body></html>
+        document.addEventListener("DOMContentLoaded", () => {
+          const themeToggle = document.querySelector(".theme-toggle");
+          if (themeToggle) {
+            themeToggle.addEventListener("click", toggleTheme);
+          }
+          const languageToggle = document.querySelector(".change-language");
+          if (languageToggle) {
+            languageToggle.addEventListener("click", () =>
+              changeLanguage("es")
+            );
+          }
+        });
+      </script>
+      <nav
+        class="flex justify-center items-center h-[50px] backdrop-blur-sm fixed top-0 z-10 bg-gray-100 dark:bg-darkLight mt-2 px-5 rounded-full"
+      >
+        <ul class="flex gap-5 text-lg">
+          <li>
+            <a
+              class="hover:text-blue ease-out duration-100 transition text-blue"
+              href="/portfolio/"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              class="hover:text-blue ease-out duration-100 transition text-black dark:text-white"
+              href="/portfolio/projects/"
+            >
+              Projects
+            </a>
+          </li>
+          <li class="flex items-center cursor-pointer theme-toggle">
+            <svg
+              id="themeToggleIcon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-sun"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+              ></path>
+            </svg>
+          </li>
+          <li class="flex items-end cursor-pointer change-language">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-language"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M4 5h7"></path>
+              <path d="M9 3v2c0 4.418 -2.239 8 -5 8"></path>
+              <path d="M5 9c0 2.144 2.952 3.908 6.7 4"></path>
+              <path d="M12 20l4 -9l4 9"></path>
+              <path d="M19.1 18h-6.2"></path>
+            </svg>
+          </li>
+        </ul>
+      </nav>
+      <section
+        class="flex flex-col sm:flex-row md:flex-col 2xl:flex-row md:justify-between w-full items-start sm:items-center md:items-start 2xl:items-center gap-5 2xl:gap-0"
+      >
+        <h1
+          class="text-4xl sm:text-5xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold order-2 2xl:order-1"
+        >
+          Hello 👋<br />
+          I&#39;m Hugo Oliva
+        </h1>
+        <div class="order-1 2xl:order-2">
+          <span
+            class="size-40 2xl:size-52 bg-gray-700/60 border border-gray-100 shadow-lg rounded-full block relative overflow-hidden"
+            ><img
+              alt="avatar"
+              sizes="100vw"
+              srcset="
+                https://yt3.googleusercontent.com/Km7pt-NmSLxHB8bo1AqpbtoSe6jhNqWi4i0M7SOf-0qNNMcmVIoFAoaPntHbH7J7F7j6qiUnBA=s176-c-k-c0x00ffffff-no-rj
+              "
+              src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.2d4d367d.png&w=3840&q=30"
+              decoding="async"
+              data-nimg="fill"
+              class="rounded-full drop-shadow-2xl scale-125"
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                box-sizing: border-box;
+                padding: 0;
+                border: none;
+                margin: auto;
+                display: block;
+                width: 0;
+                height: 0;
+                min-width: 100%;
+                max-width: 100%;
+                min-height: 100%;
+                max-height: 100%;
+                object-fit: cover;
+              "
+            />
+          </span>
+        </div>
+      </section>
+      <section
+        class="flex flex-col 2xl:flex-row w-full gap-5 2xl:gap-5 items-start justify-between"
+      >
+        <p class="text-lg sm:text-xl 2xl:text-2xl">
+          Frontend Developer with a strong passion for details. Specialized in
+          React and committed to excellence in every project.
+        </p>
+        <div class="px-0 2xl:px-5 flex justify-center items-center">
+          <div class="flex gap-3 h-fit transition-all">
+            <a
+              href="https://github.com/HugoOlivaR"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="black"
+                class="icon icon-tabler icon-tabler-brand-github hover:scale-110 hover:stroke-blue dark:hover:stroke-blue duration-150 stroke-black dark:stroke-white"
+                width="45"
+                height="45"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/hugo-oliva-romero-88b246221/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="black"
+                class="icon icon-tabler icon-tabler-brand-linkedin hover:scale-110 hover:stroke-blue dark:hover:stroke-blue duration-150 stroke-black dark:stroke-white"
+                width="45"
+                height="45"
+                viewBox="1 1 22 22"
+                stroke-width="1.5"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+                ></path>
+                <path d="M8 11l0 5"></path>
+                <path d="M8 8l0 .01"></path>
+                <path d="M12 16l0 -5"></path>
+                <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
+              </svg>
+            </a>
+            <a href="mailto:hugoliva158@gmail.com" class="group">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="black"
+                class="icon icon-tabler icon-tabler-brand-mail hover:scale-110 hover:stroke-blue dark:hover:stroke-blue duration-150 stroke-black dark:stroke-white"
+                width="45"
+                height="45"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
+                ></path>
+                <path d="M3 7l9 6l9 -6"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="w-full mt-5 2xl:mt-10">
+        <h2 class="text-3xl sm:text-4xl font-bold">Skills:</h2>
+        <div class="flex flex-wrap gap-5 mt-7">
+          <div
+            class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 items-center p-5 border rounded-2xl bg-white dark:bg-darkLight"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler hover:scale-110 duration-100 stroke-[#fc4f13] icons-tabler-outline icon-tabler-brand-html5"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
+              <path
+                d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5"
+              ></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler hover:scale-110 duration-100 stroke-[#3d9dd7] icons-tabler-outline icon-tabler-brand-css3"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
+              <path
+                d="M8.5 8h7l-4.5 4h4l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5"
+              ></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler hover:scale-110 duration-100 stroke-[#f7e025] icons-tabler-outline icon-tabler-brand-javascript"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
+              <path d="M7.5 8h3v8l-2 -1"></path>
+              <path
+                d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5"
+              ></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler hover:scale-110 duration-100 stroke-[#377cc8] icons-tabler-outline icon-tabler-brand-typescript"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M15 17.5c.32 .32 .754 .5 1.207 .5h.543c.69 0 1.25 -.56 1.25 -1.25v-.25a1.5 1.5 0 0 0 -1.5 -1.5a1.5 1.5 0 0 1 -1.5 -1.5v-.25c0 -.69 .56 -1.25 1.25 -1.25h.543c.453 0 .887 .18 1.207 .5"
+              ></path>
+              <path d="M9 12h4"></path>
+              <path d="M11 12v6"></path>
+              <path
+                d="M21 19v-14a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2 -2z"
+              ></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler hover:scale-110 duration-100 stroke-[#66dbfb] icons-tabler-outline icon-tabler-brand-react"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102"
+              ></path>
+              <path
+                d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102"
+              ></path>
+              <path
+                d="M6.305 15.287c-.676 2.615 -.485 4.693 .695 5.373c1.913 1.105 5.703 -1.877 8.464 -6.66c.387 -.67 .733 -1.339 1.036 -2"
+              ></path>
+              <path
+                d="M17.694 8.716c.677 -2.616 .487 -4.696 -.694 -5.376c-1.913 -1.105 -5.703 1.877 -8.464 6.66c-.387 .67 -.733 1.34 -1.037 2"
+              ></path>
+              <path
+                d="M12 5.424c-1.925 -1.892 -3.82 -2.766 -5 -2.084c-1.913 1.104 -1.226 5.877 1.536 10.66c.386 .67 .793 1.304 1.212 1.896"
+              ></path>
+              <path
+                d="M12 18.574c1.926 1.893 3.821 2.768 5 2.086c1.913 -1.104 1.226 -5.877 -1.536 -10.66c-.375 -.65 -.78 -1.283 -1.212 -1.897"
+              ></path>
+              <path
+                d="M11.5 12.866a1 1 0 1 0 1 -1.732a1 1 0 0 0 -1 1.732z"
+              ></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler hover:scale-110 duration-100 stroke-[#cecece] icons-tabler-outline icon-tabler-brand-nextjs"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M9 15v-6l7.745 10.65a9 9 0 1 1 2.255 -1.993"></path>
+              <path d="M15 12v-3"></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler hover:scale-110 duration-100 stroke-[#6620bd] icons-tabler-outline icon-tabler-brand-astro"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M14.972 3.483c.163 .196 .247 .46 .413 .987l3.64 11.53a15.5 15.5 0 0 0 -4.352 -1.42l-2.37 -7.723a.31 .31 0 0 0 -.296 -.213a.31 .31 0 0 0 -.295 .214l-2.342 7.718a15.5 15.5 0 0 0 -4.37 1.422l3.657 -11.53c.168 -.527 .251 -.79 .415 -.986c.144 -.172 .331 -.306 .544 -.388c.242 -.094 .527 -.094 1.099 -.094h2.612c.572 0 .858 0 1.1 .094c.213 .082 .4 .217 .545 .39"
+              ></path>
+              <path d="M9 18c0 1.5 2 3 3 4c1 -1 3 -3 3 -4q -3 1.5 -6 0"></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler hover:scale-110 duration-100 stroke-[#3ebff8] icons-tabler-outline icon-tabler-brand-tailwind"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M11.667 6c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 2 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968zm-4 6.5c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 1.975 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968z"
+              ></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler hover:scale-110 duration-100 stroke-[#ff4d89] icons-tabler-outline icon-tabler-brand-storybook"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M5 4l.5 16.5l13.5 .5v-18z"></path>
+              <path
+                d="M9 15c.6 1.5 1.639 2 3.283 2h-.283c1.8 0 3 -.974 3 -2.435c0 -1.194 -.831 -1.799 -2.147 -2.333l-1.975 -.802c-1.15 -.467 -1.878 -1.422 -1.878 -2.467c0 -.97 .899 -1.786 2.087 -1.893l.613 -.055c1.528 -.138 3 .762 3.3 1.985"
+              ></path>
+              <path d="M16 3.5v1"></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler hover:scale-110 duration-100 stroke-[#77c832] icons-tabler-outline icon-tabler-brand-nodejs"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M9 9v8.044a2 2 0 0 1 -2.996 1.734l-1.568 -.9a3 3 0 0 1 -1.436 -2.561v-6.635a3 3 0 0 1 1.436 -2.56l6 -3.667a3 3 0 0 1 3.128 0l6 3.667a3 3 0 0 1 1.436 2.561v6.634a3 3 0 0 1 -1.436 2.56l-6 3.667a3 3 0 0 1 -3.128 0"
+              ></path>
+              <path
+                d="M17 9h-3.5a1.5 1.5 0 0 0 0 3h2a1.5 1.5 0 0 1 0 3h-3.5"
+              ></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler hover:scale-110 duration-100 stroke-[#f05539] icons-tabler-outline icon-tabler-brand-git"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M16 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+              <path d="M12 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+              <path d="M12 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+              <path d="M12 15v-6"></path>
+              <path d="M15 11l-2 -2"></path>
+              <path d="M11 7l-1.9 -1.9"></path>
+              <path
+                d="M13.446 2.6l7.955 7.954a2.045 2.045 0 0 1 0 2.892l-7.955 7.955a2.045 2.045 0 0 1 -2.892 0l-7.955 -7.955a2.045 2.045 0 0 1 0 -2.892l7.955 -7.955a2.045 2.045 0 0 1 2.892 0z"
+              ></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler hover:scale-110 duration-100 stroke-[#55ad47] icons-tabler-outline icon-tabler-brand-mongodb"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M12 3v19"></path>
+              <path
+                d="M18 11.227c0 3.273 -1.812 4.77 -6 9.273c-4.188 -4.503 -6 -6 -6 -9.273c0 -4.454 3.071 -6.927 6 -9.227c2.929 2.3 6 4.773 6 9.227z"
+              ></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler hover:scale-110 duration-100 stroke-[#08668e] icons-tabler-outline icon-tabler-brand-mysql"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M13 21c-1.427 -1.026 -3.59 -3.854 -4 -6c-.486 .77 -1.501 2 -2 2c-1.499 -.888 -.574 -3.973 0 -6c-1.596 -1.433 -2.468 -2.458 -2.5 -4c-3.35 -3.44 -.444 -5.27 2.5 -3h1c8.482 .5 6.421 8.07 9 11.5c2.295 .522 3.665 2.254 5 3.5c-2.086 -.2 -2.784 -.344 -3.5 0c.478 1.64 2.123 2.2 3.5 3"
+              ></path>
+              <path d="M9 7h.01"></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler hover:scale-110 duration-100 stroke-[#a373ff] icons-tabler-outline icon-tabler-brand-vite"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M10 4.5l6 -1.5l-2 6.5l2 -.5l-4 7v-5l-3 1z"></path>
+              <path d="M15 6.5l7 -1.5l-10 17l-10 -17l7.741 1.5"></path>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="50"
+              height="50"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler hover:scale-110 duration-100 stroke-[#fbbf75] icons-tabler-outline icon-tabler-brand-wix"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path
+                d="M3 9l1.5 6l1.379 -5.515a.64 .64 0 0 1 1.242 0l1.379 5.515l1.5 -6"
+              ></path>
+              <path d="M13 11.5v3.5"></path>
+              <path d="M16 9l5 6"></path>
+              <path d="M21 9l-5 6"></path>
+              <path d="M13 9h.01"></path>
+            </svg>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main
+      class="p-5 sm:p-10 w-full md:w-3/5 relative md:absolute top-0 right-0 min-h-screen pt-20 2xl:pt-24 flex flex-col gap-20"
+    >
+      <section>
+        <h3 class="text-4xl font-bold mb-10">🎯Experience</h3>
+        <div
+          class="flex flex-col gap-3 border-gray-200 border-l-4 mx-4 px-5 relative pb-14 w-full"
+        >
+          <div
+            class="h-4 w-4 rounded-full border-2 border-blue bg-gray-200 dark:bg-darkLight absolute left-[-10px] top-3"
+          ></div>
+          <div
+            class="flex items-center justify-between 2xl:justify-start gap-5"
+          >
+            <h4 class="text-3xl">Frontend Developer</h4>
+            <div class="flex flex-wrap gap-2 justify-end w-fit">
+              <div
+                class="bg-[#66dbfb] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#66dbfb]"
+              >
+                React
+              </div>
+              <div
+                class="bg-[#cecece] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece]"
+              >
+                NextJS
+              </div>
+              <div
+                class="bg-[#3ebff8] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#3ebff8]"
+              >
+                TailwindCSS
+              </div>
+              <div
+                class="bg-[#ff4d89] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#ff4d89]"
+              >
+                Storybook
+              </div>
+            </div>
+          </div>
+          <h5 class="text-2xl">Gorilast, Madrid - Spain</h5>
+          <p class="text-xl">March 2024 - June 2024</p>
+          <div>
+            <p class="text-lg">- Frontend of a food marketplace.</p>
+            <p class="text-lg">
+              - Continuous integration and continuous deployment (CI/CD) using
+              GitLab.
+            </p>
+            <p class="text-lg">- Testing with Cypress &amp; Storybook.</p>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-3 border-gray-200 border-l-4 mx-4 px-5 relative pb-5 w-full"
+        >
+          <div
+            class="h-4 w-4 rounded-full border-2 border-blue bg-gray-200 dark:bg-darkLight absolute left-[-10px] top-3"
+          ></div>
+          <div
+            class="flex items-center justify-between 2xl:justify-start gap-5"
+          >
+            <h4 class="text-3xl">System Administrator</h4>
+            <div class="flex flex-wrap gap-2 justify-end w-fit">
+              <div
+                class="bg-[#ff9c0a] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#ff9c0a]"
+              >
+                Vmware
+              </div>
+              <div
+                class="bg-[#77c832] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#77c832]"
+              >
+                Networks
+              </div>
+            </div>
+          </div>
+          <h5 class="text-2xl">HDT, Madrid - Spain</h5>
+          <p class="text-xl">March 2022 - June 2022</p>
+          <div>
+            <p class="text-lg">- Maintained windows servers.</p>
+            <p class="text-lg">
+              - Learned and applied VMware for virtualization.
+            </p>
+            <p class="text-lg">- Configured and managed NGINX servers.</p>
+            <p class="text-lg">
+              - Gained experience in networks and server infrastructure.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="flex flex-col gap-10">
+        <h3 class="text-4xl font-bold">🚀 Projects</h3>
+        <div
+          class="flex flex-col xl:flex-row bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl duration-75 ease-linear group hover:shadow-lg cursor-default"
+        >
+          <div class="flex flex-col gap-6 px-5 relative pb-14 w-full">
+            <div class="flex items-center 2xl:justify-start gap-4">
+              <h4 class="text-3xl">SparkCollab</h4>
+              <div class="flex flex-wrap gap-2 justify-end w-fit">
+                <div
+                  class="bg-[#cecece] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece] flex gap-1 items-center"
+                >
+                  Link
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-external-link stroke-black dark:stroke-white"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"
+                    ></path>
+                    <path d="M11 13l9 -9"></path>
+                    <path d="M15 4h5v5"></path>
+                  </svg>
+                </div>
+                <div
+                  class="bg-[#66dbfb] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#66dbfb]"
+                >
+                  Fullstack
+                </div>
+              </div>
+            </div>
+            <p class="text-lg">
+              Full-stack application designed to facilitate collaboration among
+              students, entrepreneurs, and self-taught individuals. Thanks to
+              its modern stack, SparkCollab ensures a fast, responsive, and
+              seamless user experience.
+            </p>
+            <div class="flex gap-5">
+              <div class="flex flex-row xl:flex-col flex-wrap gap-2">
+                <div
+                  class="bg-[#77c832] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#77c832]"
+                >
+                  NodeJs
+                </div>
+                <div
+                  class="bg-[#f05539] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#f05539]"
+                >
+                  Express
+                </div>
+                <div
+                  class="bg-[#0eb6ff] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#0eb6ff]"
+                >
+                  MySQL
+                </div>
+              </div>
+              <div class="w-1 h-26 bg-gray-200"></div>
+              <div class="flex flex-row xl:flex-col flex-wrap gap-2">
+                <div
+                  class="bg-[#a373ff] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#a373ff]"
+                >
+                  Vite
+                </div>
+                <div
+                  class="bg-[#66dbfb] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#66dbfb]"
+                >
+                  React
+                </div>
+                <div
+                  class="bg-[#3ebff8] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#3ebff8]"
+                >
+                  Tailwind
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full flex justify-center xl:justify-end items-center">
+            <div class="w-fit h-64 2xl:h-72 overflow-hidden">
+              <img
+                class="w-full h-full object-cover"
+                src="../../public/shots/sparkcollab.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col xl:flex-row bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl duration-75 ease-linear group hover:shadow-lg cursor-default"
+        >
+          <div class="flex flex-col gap-6 px-5 relative pb-14 w-full">
+            <div class="flex items-center 2xl:justify-start gap-4">
+              <h4 class="text-3xl">Zentunes</h4>
+              <div class="flex flex-wrap gap-2 justify-end w-fit">
+                <div
+                  class="bg-[#cecece] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece] flex gap-1 items-center"
+                >
+                  Link
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-external-link stroke-black dark:stroke-white"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path
+                      d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"
+                    ></path>
+                    <path d="M11 13l9 -9"></path>
+                    <path d="M15 4h5v5"></path>
+                  </svg>
+                </div>
+                <div
+                  class="bg-[#bbe499] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#bbe499]"
+                >
+                  Frontend
+                </div>
+              </div>
+            </div>
+            <p class="text-lg">
+              Simple web application that allows users listen some relaxing
+              sounds such as rain, fire, waves and forest. It was developed
+              using vanilla JavaScript, HTML and CSS.
+            </p>
+            <div class="flex gap-5">
+              <div class="flex flex-row xl:flex-col gap-2">
+                <div
+                  class="bg-[#f7e025] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#f7e025]"
+                >
+                  JavaScript
+                </div>
+                <div
+                  class="bg-[#3d9dd7] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#3d9dd7]"
+                >
+                  CSS
+                </div>
+                <div
+                  class="bg-[#fc4f13] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#fc4f13]"
+                >
+                  HTML
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full flex justify-center xl:justify-end items-center">
+            <div class="w-fit h-64 2xl:h-72 overflow-hidden">
+              <img
+                class="w-full h-full object-cover"
+                src="../../public/shots/zentunes.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <a href="/portfolio/projects/"
+          ><div class="cursor-pointer w-fit">
+            <p class="text-lg flex items-end gap-1 text-blue hover:underline">
+              See more
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 12l14 0"></path>
+                <path d="M13 18l6 -6"></path>
+                <path d="M13 6l6 6"></path>
+              </svg>
+            </p></div
+        ></a>
+      </section>
+      <section class="flex flex-col gap-10">
+        <h3 class="text-4xl font-bold">🎓 Education</h3>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-10"
+        >
+          <div
+            class="flex flex-col xl:flex-row bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl w-full duration-75 ease-linear group hover:shadow-xl cursor-default"
+          >
+            <div
+              class="flex flex-col gap-6 px-5 relative pb-10 w-full justify-start items-center duration-75 ease-linear group-hover:scale-105"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100"
+                height="100"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-brain"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M15.5 13a3.5 3.5 0 0 0 -3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8"
+                ></path>
+                <path
+                  d="M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1 -7 0v-1.8"
+                ></path>
+                <path d="M17.5 16a3.5 3.5 0 0 0 0 -7h-.5"></path>
+                <path d="M19 9.3v-2.8a3.5 3.5 0 0 0 -7 0"></path>
+                <path d="M6.5 16a3.5 3.5 0 0 1 0 -7h.5"></path>
+                <path d="M5 9.3v-2.8a3.5 3.5 0 0 1 7 0v10"></path>
+              </svg>
+              <div class="flex flex-col gap-5 text-center">
+                <h4 class="text-3xl">AI Master&#39;s Degree</h4>
+                <p>
+                  Artificial Intelligence and Big Data Master&#39;s Degree
+                  endorsed by the University of Murcia Spain.
+                </p>
+                <p>2023 - 2024</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col xl:flex-row bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl w-full duration-75 ease-linear group hover:shadow-xl cursor-default"
+          >
+            <div
+              class="flex flex-col gap-6 px-5 relative pb-10 w-full justify-start items-center duration-75 ease-linear group-hover:scale-105"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100"
+                height="100"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-code"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M7 8l-4 4l4 4"></path>
+                <path d="M17 8l4 4l-4 4"></path>
+                <path d="M14 4l-4 16"></path>
+              </svg>
+              <div class="flex flex-col gap-5 text-center">
+                <h4 class="text-3xl">Application Development Degree</h4>
+                <p>
+                  Certificate of Higher Education cross-platform application
+                  development.
+                </p>
+                <p>2022 - 2024</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col xl:flex-row bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl w-full duration-75 ease-linear group hover:shadow-xl cursor-default"
+          >
+            <div
+              class="flex flex-col gap-6 px-5 relative pb-10 w-full justify-start items-center duration-75 ease-linear group-hover:scale-105"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100"
+                height="100"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-devices-pc"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M3 5h6v14h-6z"></path>
+                <path d="M12 9h10v7h-10z"></path>
+                <path d="M14 19h6"></path>
+                <path d="M17 16v3"></path>
+                <path d="M6 13v.01"></path>
+                <path d="M6 16v.01"></path>
+              </svg>
+              <div class="flex flex-col gap-5 text-center">
+                <h4 class="text-3xl">Sistems and Networks Degree</h4>
+                <p>
+                  Vocational Education and Training Microcomputer systems and
+                  networks.
+                </p>
+                <p>2020 - 2022</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col xl:flex-row bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl w-full duration-75 ease-linear group hover:shadow-xl cursor-default"
+          >
+            <div
+              class="flex flex-col gap-6 px-5 relative pb-10 w-full justify-start items-center duration-75 ease-linear group-hover:scale-105"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="100"
+                height="100"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-dots"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+                <path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+              </svg>
+              <div class="flex flex-col gap-5 text-center">
+                <h4 class="text-3xl">Always learning</h4>
+                <p>
+                  Constantly learning new things to feed my knowledge and let me
+                  learn.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

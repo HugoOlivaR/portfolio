@@ -51,6 +51,9 @@ export const ui = {
     "projects.1.title": "Zentunes",
     "projects.1.description": "Simple web application that allows users listen some relaxing sounds such as rain, fire, waves and forest. It was developed using vanilla JavaScript, HTML and CSS.",
 
+    "projects.6.title": "Zentunes 2.0",
+    "projects.6.description": "A new version of Zentunes developed in just 24H from scratch. Beter loading times and SEO. It was updated from the last version using React, Tailwind and Vite.",
+
     "projects.2.title": "H-Clock",
     "projects.2.description": "Minimalist digital clock developed with HTML, CSS and JavaScript. It features light and dark theme. This was my first web where I implemented JavaScript.",
 
@@ -144,6 +147,10 @@ export const ui = {
 
     "projects.1.title": "Zentunes",
     "projects.1.description": "Sencilla aplicación web que permite a los usuarios escuchar algunos sonidos relajantes como la lluvia, el fuego, las olas o el bosque. Fue desarrollado usando JavaScript, HTML y CSS.",
+
+    "projects.6.title": "Zentunes 2.0",
+    "projects.6.description": "Una nueva versión de Zentunes desarrollada desde cero en solo 24 horas. Mejores tiempos de carga y SEO. Fue actualizada desde la última versión utilizando React, Tailwind y Vite.",
+
 
     "projects.2.title": "H-Clock",
     "projects.2.description": "Reloj digital minimalista desarrollado con HTML, CSS y JavaScript. Cuenta con tema claro y oscuro. Esta fue mi primera web en la que implementé JavaScript.",
