@@ -45,23 +45,30 @@ export const ui = {
     "projects.0.title": "SparkCollab",
     "projects.0.description": "Full-stack application designed to facilitate collaboration among students, entrepreneurs, and self-taught individuals. Thanks to its modern stack, SparkCollab ensures a fast, responsive, and seamless user experience.",
 
-    "projects.3.title": "Portfolio",
-    "projects.3.description": "My personal portfolio developed with Astro and TailwindCSS. It is a responsive and accessible web. It also has support for multiple languages and themes.",
-
     "projects.1.title": "Zentunes",
     "projects.1.description": "Simple web application that allows users listen some relaxing sounds such as rain, fire, waves and forest. It was developed using vanilla JavaScript, HTML and CSS.",
 
-    "projects.6.title": "Zentunes 2.0",
-    "projects.6.description": "A new version of Zentunes developed in just 24H from scratch. Beter loading times and SEO. It was updated from the last version using React, Tailwind and Vite.",
-
     "projects.2.title": "H-Clock",
     "projects.2.description": "Minimalist digital clock developed with HTML, CSS and JavaScript. It features light and dark theme. This was my first web where I implemented JavaScript.",
+
+    "projects.3.title": "Portfolio",
+    "projects.3.description": "My personal portfolio developed with Astro and TailwindCSS. It is a responsive and accessible web. It also has support for multiple languages and themes.",
 
     "projects.4.title": "Élite Voltaje",
     "projects.4.description": "Electricity company web. Developed with a CMS. It is a responsive and accessible web. Focused on SEO positioning.",
 
     "projects.5.title": "H&F Houses",
     "projects.5.description": "Real estate web. Developed with a CMS. With contact forms to be able to connect with clients. Focused on SEO positioning.",
+
+    "projects.6.title": "Zentunes 2.0",
+    "projects.6.description": "A new version of Zentunes developed in just 24H from scratch. Beter loading times and SEO. It was updated from the last version using React, Tailwind and Vite.",
+
+    "projects.7.title": "JetNova",
+    "projects.7.description": "Static corporate website made with nextJS, tailwindCSS and TypeScript for my own digital innovation agency. Focused on responsiveness, SEO and customer acquisition.",
+
+    "projects.8.title": "WILDSPHERE",
+    "projects.8.description": "Full-Stack e-commerce developed with nextJS in medusaJS framework. Fully functional backend with product management functionality, orders, payments...",
+
 
     "see-more": "See more",
 
@@ -160,6 +167,13 @@ export const ui = {
 
     "projects.5.title": "H&F Houses",
     "projects.5.description": "Web de una inmobiliaria. Desarrollada con un CMS. Con formularios de contacto para poder conectar con los clientes. Centrado en el posicionamiento SEO.",
+
+    "projects.7.title": "JetNova",
+    "projects.7.description": "Página web estática corporativa hecha con nextJS, tailwindCSS y TypeScript para mi propia agencia de innovación digital. Centrada en la velocidad de respuesta, SEO y captacion de clientes.",
+
+    "projects.8.title": "WILDSPHERE",
+    "projects.8.description": "E-commerce full-stack desarrollado con nextJS en el framework medusaJS. Backend totalmente funcional con funcionalidades de gestión de productos, pedidos, pagos...",
+
 
     "see-more": "Ver más",
 

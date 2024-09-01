@@ -6,8 +6,90 @@ const t = useTranslations(lang);
 ---
 
 <article class="flex flex-col">
-  <h2 class="text-3xl sm:text-4xl pb-5 font-bold">🎨 {t("personal-projects")}</h2>
+  <h2 class="text-3xl sm:text-4xl pb-5 font-bold">
+    🎨 {t("personal-projects")}
+  </h2>
   <section class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-10">
+    <div
+      class="flex flex-col bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl duration-150 ease-linear group hover:shadow-lg cursor-default w-fit dark:shadow-stone-700"
+    >
+      <div class="flex flex-col gap-6 px-5 relative w-full">
+        <div class="flex justify-between items-start gap-4">
+          <div>
+            <h4 class="text-3xl">{t("projects.7.title")}</h4>
+            <p class="text-xl pt-2">2024</p>
+          </div>
+          <div class="flex flex-wrap gap-2 justify-end w-fit">
+            <div
+              class="bg-[#bbe499] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#bbe499]"
+            >
+              Frontend
+            </div>
+            <div
+              class="bg-[#FFD433] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#FFD433]"
+            >
+              {t("medium-project")}
+            </div>
+            <a
+              class="bg-[#cecece] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece] flex gap-1 items-center"
+              href="https://www.jetnova.es/"
+              target="_blank"
+              aria-label="Open project link"
+            >
+              Link
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-external-link stroke-black dark:stroke-white"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"
+                ></path><path d="M11 13l9 -9"></path><path d="M15 4h5v5"
+                ></path></svg
+              >
+            </a>
+          </div>
+        </div>
+        <p class="text-lg">
+          {t("projects.7.description")}
+        </p>
+      </div>
+      <div
+        class="w-full flex pt-8 xl:pt-0 gap-5 items-center flex-col sm:flex-row lg:flex-col xl:flex-row justify-between px-5"
+      >
+        <div
+          class="flex flex-row sm:flex-col lg:flex-row xl:flex-col flex-wrap gap-2 w-1/2"
+        >
+          <div
+            class="bg-[#c5c5c5] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#b1b1b1]"
+          >
+            Next JS
+          </div>
+          <div
+            class="bg-[#66dbfb] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#66dbfb]"
+          >
+            React
+          </div>
+          <div
+            class="bg-[#3ebff8] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#3ebff8]"
+          >
+            Tailwind
+          </div>
+        </div>
+        <div class="max-h-64 max-w-72 overflow-hidden">
+          <img
+            class="w-/12 h-full object-cover"
+            src="/shots/jetnova.webp"
+            alt="JetNova Preview"
+          />
+        </div>
+      </div>
+    </div>
     <div
       class="flex flex-col bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl duration-150 ease-linear group hover:shadow-lg cursor-default w-fit dark:shadow-stone-700"
     >
@@ -28,40 +110,19 @@ const t = useTranslations(lang);
             >
               {t("big-project")}
             </div>
-            <a
-              href="http://79.146.88.138:4000/"
-              target="_blank"
-              aria-label="Open project link"
-              class="bg-[#cecece] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece] flex gap-1 items-center"
-            >
-              Link
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-external-link stroke-black dark:stroke-white"
-                ><path stroke="none" d="M0 0h24v24H0z" fill="none"
-                ></path><path
-                  d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"
-                ></path><path d="M11 13l9 -9"></path><path d="M15 4h5v5"
-                ></path></svg
-              >
-            </a>
           </div>
         </div>
         <p class="text-lg">
           {t("projects.0.description")}
         </p>
-        
       </div>
-      <div class="w-full flex pt-8 xl:pt-0 gap-5 items-center flex-col sm:flex-row lg:flex-col xl:flex-row justify-between px-5">
+      <div
+        class="w-full flex pt-8 xl:pt-0 gap-5 items-center flex-col sm:flex-row lg:flex-col xl:flex-row justify-between px-5"
+      >
         <div class="flex gap-5 h-fit w-fit justify-center">
-          <div class="flex flex-row sm:flex-col lg:flex-row xl:flex-col flex-wrap gap-2 w-1/2">
+          <div
+            class="flex flex-row sm:flex-col lg:flex-row xl:flex-col flex-wrap gap-2 w-1/2"
+          >
             <div
               class="bg-[#77c832] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#77c832]"
             >
@@ -79,7 +140,9 @@ const t = useTranslations(lang);
             </div>
           </div>
           <div class="w-1 h-26 bg-gray-200"></div>
-          <div class="flex flex-row sm:flex-col lg:flex-row xl:flex-col flex-wrap gap-2 w-1/2">
+          <div
+            class="flex flex-row sm:flex-col lg:flex-row xl:flex-col flex-wrap gap-2 w-1/2"
+          >
             <div
               class="bg-[#a373ff] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#a373ff]"
             >
@@ -97,7 +160,7 @@ const t = useTranslations(lang);
             </div>
           </div>
         </div>
-        <div class=" max-h-64 max-w-72 overflow-hidden">
+        <div class="max-h-64 max-w-72 overflow-hidden">
           <img
             class="w-full h-full object-cover"
             src="/shots/sparkcollab.webp"
@@ -124,7 +187,7 @@ const t = useTranslations(lang);
             <div
               class="bg-[#2AE700] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#2AE700]"
             >
-            {t("small-project")}
+              {t("small-project")}
             </div>
             <a
               class="bg-[#cecece] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece] flex gap-1 items-center"
@@ -143,8 +206,7 @@ const t = useTranslations(lang);
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 class="icon icon-tabler icons-tabler-outline icon-tabler-external-link stroke-black dark:stroke-white"
-                ><path stroke="none" d="M0 0h24v24H0z" fill="none"
-                ></path><path
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
                   d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"
                 ></path><path d="M11 13l9 -9"></path><path d="M15 4h5v5"
                 ></path></svg
@@ -155,10 +217,13 @@ const t = useTranslations(lang);
         <p class="text-lg">
           {t("projects.6.description")}
         </p>
-        
       </div>
-      <div class="w-full flex pt-8 xl:pt-0 gap-5 items-center flex-col sm:flex-row lg:flex-col xl:flex-row justify-between px-5">
-        <div class="flex flex-row sm:flex-col lg:flex-row xl:flex-col flex-wrap gap-2 w-1/2">
+      <div
+        class="w-full flex pt-8 xl:pt-0 gap-5 items-center flex-col sm:flex-row lg:flex-col xl:flex-row justify-between px-5"
+      >
+        <div
+          class="flex flex-row sm:flex-col lg:flex-row xl:flex-col flex-wrap gap-2 w-1/2"
+        >
           <div
             class="bg-[#a373ff] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#a373ff]"
           >
@@ -175,7 +240,7 @@ const t = useTranslations(lang);
             Tailwind
           </div>
         </div>
-        <div class=" max-h-64 max-w-72 overflow-hidden">
+        <div class="max-h-64 max-w-72 overflow-hidden">
           <img
             class="w-/12 h-full object-cover"
             src="/shots/zentunes2.webp"
@@ -202,7 +267,7 @@ const t = useTranslations(lang);
             <div
               class="bg-[#FFD433] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#FFD433]"
             >
-            {t("medium-project")}
+              {t("medium-project")}
             </div>
             <a
               class="bg-[#cecece] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece] flex gap-1 items-center"
@@ -221,8 +286,7 @@ const t = useTranslations(lang);
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 class="icon icon-tabler icons-tabler-outline icon-tabler-external-link stroke-black dark:stroke-white"
-                ><path stroke="none" d="M0 0h24v24H0z" fill="none"
-                ></path><path
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
                   d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"
                 ></path><path d="M11 13l9 -9"></path><path d="M15 4h5v5"
                 ></path></svg
@@ -233,10 +297,13 @@ const t = useTranslations(lang);
         <p class="text-lg">
           {t("projects.3.description")}
         </p>
-        
       </div>
-      <div class="w-full flex pt-8 xl:pt-0 gap-5 items-center flex-col sm:flex-row lg:flex-col xl:flex-row justify-between px-5">
-        <div class="flex flex-row sm:flex-col lg:flex-row xl:flex-col gap-2 w-full">
+      <div
+        class="w-full flex pt-8 xl:pt-0 gap-5 items-center flex-col sm:flex-row lg:flex-col xl:flex-row justify-between px-5"
+      >
+        <div
+          class="flex flex-row sm:flex-col lg:flex-row xl:flex-col gap-2 w-full"
+        >
           <div
             class="bg-[#a373ff] w-fit bg-opacity-50 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#a373ff] texw"
           >
@@ -253,7 +320,7 @@ const t = useTranslations(lang);
             HTML
           </div>
         </div>
-        <div class=" max-h-64 max-w-72 overflow-hidden">
+        <div class="max-h-64 max-w-72 overflow-hidden">
           <img
             class="w-full h-full object-cover"
             src="/shots/portfolio.webp"
@@ -280,7 +347,7 @@ const t = useTranslations(lang);
             <div
               class="bg-[#FFD433] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#FFD433]"
             >
-            {t("medium-project")}
+              {t("medium-project")}
             </div>
             <a
               class="bg-[#cecece] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece] flex gap-1 items-center"
@@ -299,8 +366,7 @@ const t = useTranslations(lang);
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 class="icon icon-tabler icons-tabler-outline icon-tabler-external-link stroke-black dark:stroke-white"
-                ><path stroke="none" d="M0 0h24v24H0z" fill="none"
-                ></path><path
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
                   d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"
                 ></path><path d="M11 13l9 -9"></path><path d="M15 4h5v5"
                 ></path></svg
@@ -311,10 +377,13 @@ const t = useTranslations(lang);
         <p class="text-lg">
           {t("projects.1.description")}
         </p>
-        
       </div>
-      <div class="w-full flex pt-8 xl:pt-0 gap-5 items-center flex-col sm:flex-row lg:flex-col xl:flex-row justify-between px-5">
-        <div class="flex flex-row sm:flex-col lg:flex-row xl:flex-col gap-2 w-full">
+      <div
+        class="w-full flex pt-8 xl:pt-0 gap-5 items-center flex-col sm:flex-row lg:flex-col xl:flex-row justify-between px-5"
+      >
+        <div
+          class="flex flex-row sm:flex-col lg:flex-row xl:flex-col gap-2 w-full"
+        >
           <div
             class="bg-[#f7e025] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#f7e025]"
           >
@@ -331,88 +400,10 @@ const t = useTranslations(lang);
             HTML
           </div>
         </div>
-        <div class=" max-h-64 max-w-72 overflow-hidden">
+        <div class="max-h-64 max-w-72 overflow-hidden">
           <img
             class="w-full h-full object-cover"
             src="/shots/zentunes.webp"
-            alt=""
-          />
-        </div>
-      </div>
-    </div>
-    <div
-      class="flex flex-col bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl duration-150 ease-linear group hover:shadow-lg cursor-default w-fit dark:shadow-stone-700"
-    >
-      <div class="flex flex-col gap-6 px-5 relative w-full">
-        <div class="flex justify-between items-start gap-4">
-          <div>
-            <h4 class="text-3xl text-nowrap">{t("projects.2.title")}</h4>
-            <p class="text-xl pt-2">2020</p>
-          </div>
-          <div class="flex flex-wrap gap-2 justify-end w-fit">
-            <div
-              class="bg-[#bbe499] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#bbe499]"
-            >
-              Frontend
-            </div>
-            <div
-              class="bg-[#2AE700] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#2AE700]"
-            >
-            {t("small-project")}
-            </div>
-            <a
-              class="bg-[#cecece] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece] flex gap-1 items-center"
-              href="https://hugoolivar.github.io/H-Clock/"
-              target="_blank"
-              aria-label="Open project link"
-            >
-              Link
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="icon icon-tabler icons-tabler-outline icon-tabler-external-link stroke-black dark:stroke-white"
-                ><path stroke="none" d="M0 0h24v24H0z" fill="none"
-                ></path><path
-                  d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"
-                ></path><path d="M11 13l9 -9"></path><path d="M15 4h5v5"
-                ></path></svg
-              >
-            </a>
-          </div>
-        </div>
-        <p class="text-lg">
-          {t("projects.2.description")}
-        </p>
-        
-      </div>
-      <div class="w-full flex pt-8 xl:pt-0 gap-5 items-center flex-col sm:flex-row lg:flex-col xl:flex-row justify-between px-5">
-        <div class="flex flex-row sm:flex-col lg:flex-row xl:flex-col gap-2 w-full">
-          <div
-            class="bg-[#f7e025] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#f7e025]"
-          >
-            JavaScript
-          </div>
-          <div
-            class="bg-[#3d9dd7] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#3d9dd7]"
-          >
-            CSS
-          </div>
-          <div
-            class="bg-[#fc4f13] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#fc4f13]"
-          >
-            HTML
-          </div>
-        </div>
-        <div class=" max-h-64 max-w-72 my-3 overflow-hidden">
-          <img
-            class="w-full h-full object-cover"
-            src="/shots/h-clock.webp"
             alt=""
           />
         </div>
