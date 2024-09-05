@@ -67,6 +67,7 @@ const pages = [
       pages.map((page) => (
         <li>
           <a
+            title="page link"
             class={`hover:text-blue ease-out duration-100 transition ${currentPath === page.url ? "text-blue" : "text-black dark:text-white"}`}
             href={page.url}
           >

@@ -164,9 +164,10 @@ const t = useTranslations(lang);
       <div class="w-full flex justify-center xl:justify-end items-center">
         <div class="w-fit h-64 2xl:h-72 overflow-hidden">
           <img
+          title="Full Stack App SparkCollab"
             class="w-full h-full object-cover"
             src="/shots/sparkcollab.webp"
-            alt=""
+            alt="Full Stack App SparkCollab"
           />
         </div>
       </div>
@@ -189,6 +190,7 @@ const t = useTranslations(lang);
               {t("big-project")}
             </div>
             <a
+              title="Wildsphere Link"
               class="bg-[#cecece] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece] flex gap-1 items-center"
               href="https://wildsg.com/us"
               target="_blank"
@@ -239,14 +241,15 @@ const t = useTranslations(lang);
       <div class="w-full flex justify-center xl:justify-end items-center">
         <div class="w-fit h-64 2xl:h-72 overflow-hidden">
           <img
+            alt="E-commerce wildsphere"
+          title="E-commerce wildsphere"
             class="w-full h-full object-cover"
             src="/shots/wildsphere.webp"
-            alt=""
           />
         </div>
       </div>
     </div>
-    <a href={getRelativeLocaleUrl(lang, "/projects")}
+    <a title="personal projects" href={getRelativeLocaleUrl(lang, "/projects")}
       ><div class="cursor-pointer w-fit">
         <p class="text-lg flex items-end gap-1 text-blue hover:underline">
           {t("see-more")}

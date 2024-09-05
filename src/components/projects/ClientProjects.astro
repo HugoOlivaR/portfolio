@@ -9,7 +9,7 @@ const t = useTranslations(lang);
   <h2 class="text-3xl sm:text-4xl pb-5 font-bold">🔎 {t("client-projects")}</h2>
   <section class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-10">
     <div
-      class="flex flex-col bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl duration-150 ease-linear group hover:shadow-lg cursor-default w-fit dark:shadow-stone-700"
+      class="flex flex-col bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl duration-150 ease-linear group hover:shadow-lg cursor-default w-fit dark:shadow-stone-700 gap-5"
     >
       <div class="flex flex-col gap-6 px-5 relative w-full">
         <div class="flex justify-between items-start gap-4">
@@ -29,6 +29,7 @@ const t = useTranslations(lang);
               {t("big-project")}
             </div>
             <a
+              title="wildsphere link"
               class="bg-[#cecece] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece] flex gap-1 items-center"
               href="https://wildsg.com/us"
               target="_blank"
@@ -58,10 +59,10 @@ const t = useTranslations(lang);
         </p>
       </div>
       <div
-        class="w-full flex pt-8 xl:pt-0 gap-5 items-center flex-col sm:flex-row lg:flex-col xl:flex-row justify-between px-5"
+        class="w-full flex mt-2 xl:pt-0 gap-5 items-center flex-col sm:flex-row lg:flex-col xl:flex-row justify-between px-5"
       >
         <div
-          class="flex flex-row sm:flex-col lg:flex-row xl:flex-col flex-wrap gap-2 w-1/2"
+          class="flex flex-row sm:flex-col lg:flex-row xl:flex-col gap-2 w-full"
         >
           <div
             class="bg-[#c5c5c5] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#b1b1b1]"
@@ -81,6 +82,8 @@ const t = useTranslations(lang);
         </div>
         <div class="max-h-64 max-w-72 overflow-hidden">
           <img
+            alt="E-commerce wildsphere"
+            title="E-commerce wildsphere"
             class="w-/12 h-full object-cover"
             src="/shots/wildsphere.webp"
             alt="Wildsphere Preview"
@@ -89,7 +92,7 @@ const t = useTranslations(lang);
       </div>
     </div>
     <div
-      class="flex flex-col bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl duration-150 ease-linear group hover:shadow-lg cursor-default w-fit dark:shadow-stone-700"
+      class="flex flex-col bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl duration-150 ease-linear group hover:shadow-lg cursor-default w-fit dark:shadow-stone-700 gap-5"
     >
       <div class="flex flex-col gap-6 px-5 relative w-full">
         <div class="flex justify-between items-start gap-4">
@@ -106,9 +109,10 @@ const t = useTranslations(lang);
             <div
               class="bg-[#FFD433] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#FFD433]"
             >
-            {t("medium-project")}
+              {t("medium-project")}
             </div>
             <a
+            title="elite voltaje link"
               href="http://elitevoltaje.com/"
               target="_blank"
               aria-label="Open project link"
@@ -125,8 +129,7 @@ const t = useTranslations(lang);
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 class="icon icon-tabler icons-tabler-outline icon-tabler-external-link stroke-black dark:stroke-white"
-                ><path stroke="none" d="M0 0h24v24H0z" fill="none"
-                ></path><path
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
                   d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"
                 ></path><path d="M11 13l9 -9"></path><path d="M15 4h5v5"
                 ></path></svg
@@ -137,10 +140,13 @@ const t = useTranslations(lang);
         <p class="text-lg">
           {t("projects.4.description")}
         </p>
-        
       </div>
-      <div class="w-full flex mt-2 xl:pt-0 gap-5 items-center flex-col sm:flex-row lg:flex-col xl:flex-row justify-between px-5">
-        <div class="flex flex-row sm:flex-col lg:flex-row xl:flex-col gap-2 w-full">
+      <div
+        class="w-full flex mt-2 xl:pt-0 gap-5 items-center flex-col sm:flex-row lg:flex-col xl:flex-row justify-between px-5"
+      >
+        <div
+          class="flex flex-row sm:flex-col lg:flex-row xl:flex-col gap-2 w-full"
+        >
           <div
             class="bg-[#FF3333] w-fit bg-opacity-50 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#FF3333] texw"
           >
@@ -152,17 +158,18 @@ const t = useTranslations(lang);
             SEO
           </div>
         </div>
-        <div class=" max-h-64 max-w-72 overflow-hidden">
+        <div class="max-h-64 max-w-72 overflow-hidden">
           <img
             class="w-full h-full object-cover"
             src="/shots/elitevoltaje.webp"
-            alt=""
+            alt="Elite Voltaje Web"
+            title="Elite Voltaje Web"
           />
         </div>
       </div>
     </div>
     <div
-      class="flex flex-col bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl duration-150 ease-linear group hover:shadow-lg cursor-default w-fit dark:shadow-stone-700"
+      class="flex flex-col bg-gray-50 dark:bg-darkLight dark:bg-opacity-50 bg-opacity-50 border pt-6 px-4 rounded-2xl duration-150 ease-linear group hover:shadow-lg cursor-default w-fit dark:shadow-stone-700 gap-5"
     >
       <div class="flex flex-col gap-6 px-5 relative w-full">
         <div class="flex justify-between items-start gap-4">
@@ -179,12 +186,13 @@ const t = useTranslations(lang);
             <div
               class="bg-[#FFD433] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#FFD433]"
             >
-            {t("medium-project")}
+              {t("medium-project")}
             </div>
             <a
               class="bg-[#cecece] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece] flex gap-1 items-center"
               href="https://hyfhouses.com/"
               target="_blank"
+              title="hyfhouses link"
               aria-label="Open project link"
             >
               Link
@@ -198,8 +206,7 @@ const t = useTranslations(lang);
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 class="icon icon-tabler icons-tabler-outline icon-tabler-external-link stroke-black dark:stroke-white"
-                ><path stroke="none" d="M0 0h24v24H0z" fill="none"
-                ></path><path
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
                   d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"
                 ></path><path d="M11 13l9 -9"></path><path d="M15 4h5v5"
                 ></path></svg
@@ -210,10 +217,13 @@ const t = useTranslations(lang);
         <p class="text-lg">
           {t("projects.5.description")}
         </p>
-        
       </div>
-      <div class="w-full flex  mt-3 xl:pt-0 gap-5 items-center flex-col sm:flex-row lg:flex-col xl:flex-row justify-between px-5">
-        <div class="flex flex-row sm:flex-col lg:flex-row xl:flex-col gap-2 w-full">
+      <div
+        class="w-full flex mt-3 xl:pt-0 gap-5 items-center flex-col sm:flex-row lg:flex-col xl:flex-row justify-between px-5"
+      >
+        <div
+          class="flex flex-row sm:flex-col lg:flex-row xl:flex-col gap-2 w-full"
+        >
           <div
             class="bg-[#FF3333] w-fit bg-opacity-50 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#FF3333] texw"
           >
@@ -225,11 +235,12 @@ const t = useTranslations(lang);
             SEO
           </div>
         </div>
-        <div class=" max-h-64 max-w-72 overflow-hidden">
+        <div class="max-h-64 max-w-72 overflow-hidden">
           <img
             class="w-full h-full object-cover"
             src="/shots/hyfhouses.webp"
-            alt=""
+            alt="HyFHouses web"
+            title="HyFHouses web"
           />
         </div>
       </div>

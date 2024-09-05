@@ -36,6 +36,7 @@ export const ui = {
     "experience.1.description3": "- Configured and managed NGINX servers.",
     "experience.1.description4": "- Gained experience in networks and server infrastructure.",
 
+    "all-projects": "All my projects",
 
     "personal-projects": "Personal Projects",
     "client-projects": "Client Projects",
@@ -140,6 +141,8 @@ export const ui = {
     "experience.1.description2": "- Uso de VMware para virtualización.",
     "experience.1.description3": "- Configuración y gestión de servidores NGINX.",
     "experience.1.description4": "- Experiencia en redes e infraestructura de servidores.",
+
+    "all-projects": "Todos mis proyectos",
 
     "personal-projects": "Proyectos Personales",
     "client-projects": "Proyectos de Clientes",
