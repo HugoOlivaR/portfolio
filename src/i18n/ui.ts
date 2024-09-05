@@ -10,7 +10,7 @@ export const ui = {
   en: {
     "intro": "Hello 👋",
     "presentation": "I'm Hugo Oliva",
-    "description": "Frontend Developer with a strong passion for details. Specialized in React and committed to excellence in every project.",
+    "description": "Frontend Web Developer with a strong passion for details. Specialized in React and committed to excellence in every project.",
     "home": "Home",
     "skills": "Skills",
 
@@ -117,7 +117,7 @@ export const ui = {
   es: {
     "intro": "Hola 👋",
     "presentation": "Soy Hugo Oliva",
-    "description": "Desarrollador Frontend con una fuerte pasión por los detalles. Especializado en React y comprometido con la excelencia en cada proyecto.",
+    "description": "Desarrollador Web Frontend con una fuerte pasión por los detalles. Especializado en React y comprometido con la excelencia en cada proyecto.",
     "home": "Inicio",
     "skills": "Habilidades",
 
