@@ -108,8 +108,8 @@ export const ui = {
     "form-submit-error": "An error occurred while sending the message. Please try again later. 🚧",
 
     "ready-made-services": "Ready-made Services",
-    "ready-made-services-description": "Explore my ready-made services available on Fiverr. These packages are designed to provide quick and efficient solutions, with clear specifications and pricing, ready for you to order. 🛠️",
-    "visit-fiverr": "Visit Fiverr",
+    "ready-made-services-description": "Explore my ready-made services available on Evolvio. These packages are designed to provide quick and efficient solutions, with clear specifications and pricing, ready for you to order. 🛠️",
+    "visit-evolvio": "Visit Evolvio",
 
     "other-contact": "Other Ways to Connect",
     "other-contact-description": "If you prefer to reach out through other methods, feel free to contact me 📧",
@@ -214,8 +214,8 @@ export const ui = {
     "form-submit-error": "Ocurrió un error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde. 🚧",
 
     "ready-made-services": "Servicios Prediseñados",
-    "ready-made-services-description": "Explora mis servicios listos disponibles en Fiverr. Estos paquetes están diseñados para proporcionar soluciones rápidas y eficientes, con especificaciones y precios claros, listos para que los pidas. 🛠️",
-    "visit-fiverr": "Visitar Fiverr",
+    "ready-made-services-description": "Explora mis servicios listos disponibles en Evolvio. Estos paquetes están diseñados para proporcionar soluciones rápidas y eficientes, con especificaciones y precios claros, listos para que los pidas. 🛠️",
+    "visit-evolvio": "Visitar Evolvio",
 
     "other-contact": "Otras Formas de Conectar",
     "other-contact-description": "Si prefieres conectar conmigo a través de otros métodos, no dudes en contactarme para lo que necesites. 📧",
