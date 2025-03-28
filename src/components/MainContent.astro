@@ -13,7 +13,7 @@ const t = useTranslations(lang);
     <h3 class="text-4xl font-bold mb-10">🎯{t("experience-title")}</h3>
 
     <div
-      class="flex flex-col gap-3 border-gray-200 border-l-4 mx-4 px-5 relative pb-14 w-full"
+      class="flex flex-col gap-3 border-gray-200 border-l-4 mx-4 px-5 relative pb-10 w-full"
     >
       <div
         class="h-4 w-4 rounded-full border-2 border-blue bg-gray-200 dark:bg-darkLight absolute left-[-10px] top-3"
@@ -21,7 +21,7 @@ const t = useTranslations(lang);
       </div>
       <div class="flex justify-between 2xl:justify-start gap-5">
         <h4 class="text-3xl">{t("experience.0.title")}</h4>
-        <div class="flex flex-wrap gap-2 justify-end w-fit">
+                <div class="flex flex-wrap gap-2 justify-end w-fit">
           <div
             class="bg-[#66dbfb] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#66dbfb]"
           >
@@ -33,14 +33,14 @@ const t = useTranslations(lang);
             NextJS
           </div>
           <div
-            class="bg-[#3ebff8] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#3ebff8]"
+            class="bg-[#8332ac] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#8332ac]"
           >
-            TailwindCSS
+            .NET
           </div>
           <div
-            class="bg-[#ff4d89] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#ff4d89]"
+            class="bg-[#0eb6ff] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#0eb6ff]"
           >
-            Storybook
+            SQL
           </div>
         </div>
       </div>
@@ -69,14 +69,24 @@ const t = useTranslations(lang);
         <h4 class="text-3xl">{t("experience.1.title")}</h4>
         <div class="flex flex-wrap gap-2 justify-end w-fit">
           <div
-            class="bg-[#ff9c0a] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#ff9c0a]"
+            class="bg-[#66dbfb] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#66dbfb]"
           >
-            Vmware
+            React
           </div>
           <div
-            class="bg-[#77c832] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#77c832]"
+            class="bg-[#cecece] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece]"
           >
-            {t("networks")}
+            NextJS
+          </div>
+          <div
+            class="bg-[#3ebff8] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#3ebff8]"
+          >
+            TailwindCSS
+          </div>
+          <div
+            class="bg-[#ff4d89] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#ff4d89]"
+          >
+            Storybook
           </div>
         </div>
       </div>
@@ -91,9 +101,6 @@ const t = useTranslations(lang);
         </p>
         <p class="text-lg">
           {t("experience.1.description3")}
-        </p>
-        <p class="text-lg">
-          {t("experience.1.description4")}
         </p>
       </div>
     </div>
@@ -118,6 +125,30 @@ const t = useTranslations(lang);
             >
               {t("big-project")}
             </div>
+            <a
+              title="Wildsphere e-commerce web"
+              class="bg-[#cecece] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece] flex gap-1 items-center"
+              href="https://imcosmo.com/"
+              target="_blank"
+              aria-label="Open project link"
+            >
+              Link
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-external-link stroke-black dark:stroke-white"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
+                  d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"
+                ></path><path d="M11 13l9 -9"></path><path d="M15 4h5v5"
+                ></path></svg
+              >
+            </a>
           </div>
         </div>
         <p class="text-lg">
@@ -131,22 +162,22 @@ const t = useTranslations(lang);
               NodeJs
             </div>
             <div
-              class="bg-[#f05539] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#f05539]"
+              class="bg-[#3178c6] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#3178c6]"
             >
-              Express
+              TypeScript
             </div>
             <div
               class="bg-[#0eb6ff] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#0eb6ff]"
             >
-              MySQL
+              SQL
             </div>
           </div>
           <div class="w-1 h-26 bg-gray-200"></div>
           <div class="flex flex-row xl:flex-col flex-wrap gap-2">
             <div
-              class="bg-[#a373ff] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#a373ff]"
+              class="bg-[#cecece] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#cecece]"
             >
-              Vite
+              NextJS
             </div>
             <div
               class="bg-[#66dbfb] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#66dbfb]"
@@ -154,9 +185,9 @@ const t = useTranslations(lang);
               React
             </div>
             <div
-              class="bg-[#3ebff8] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#3ebff8]"
+              class="bg-[#a373ff] w-fit bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#a373ff]"
             >
-              Tailwind
+              AI
             </div>
           </div>
         </div>
@@ -164,10 +195,10 @@ const t = useTranslations(lang);
       <div class="w-full flex justify-center xl:justify-end items-center">
         <div class="w-fit h-64 2xl:h-72 overflow-hidden">
           <img
-          title="Full Stack App SparkCollab"
+          title="Full Stack App Cosmo AI"
             class="w-full h-full object-cover"
-            src="/shots/sparkcollab.webp"
-            alt="Full Stack App SparkCollab"
+            src="/shots/imcosmo.png"
+            alt="Full Stack App Cosmo AI"
           />
         </div>
       </div>
@@ -177,7 +208,7 @@ const t = useTranslations(lang);
     >
       <div class="flex flex-col gap-6 px-5 relative pb-14 w-full">
         <div class="flex items-center 2xl:justify-start gap-4">
-          <h4 class="text-3xl">{t("projects.8.title")}</h4>
+          <h4 class="text-3xl">{t("projects.9.title")}</h4>
           <div class="flex flex-wrap gap-2 justify-end w-fit">
             <div
               class="bg-[#66dbfb] bg-opacity-60 h-fit px-2 rounded-2xl cursor-pointer border-2 border-[#66dbfb]"
@@ -216,7 +247,7 @@ const t = useTranslations(lang);
           </div>
         </div>
         <p class="text-lg">
-          {t("projects.8.description")}
+          {t("projects.9.description")}
         </p>
         <div class="flex gap-5">
           <div class="flex flex-row xl:flex-col gap-2">
